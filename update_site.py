@@ -11,8 +11,8 @@ ROOT_DIR = "."
 # Descriptions for strategies
 STRATEGY_DESCRIPTIONS = {
     "dma": {
-        "title": "Strategy I: Dual Moving Average (DMA)",
-        "description": "This strategy uses two Moving Averages (MA) to determine trend direction. A buy signal is generated when the short-term MA crosses above the long-term MA. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period."
+        "title": "Strategy I (US)",
+        "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period."
     },
     "dma_bo": {
         "title": "Strategy I (India)",
@@ -27,8 +27,8 @@ STRATEGY_DESCRIPTIONS = {
         "description": "The HMM-enhanced strategy applied to Indian markets."
     },
     "pv": {
-        "title": "Peak Valley",
-        "description": "A price-action based strategy that identifies peaks and valleys to determine trend reversals and continuation patterns."
+        "title": "Peak Valley (US)",
+        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength."
     }
 }
 
@@ -135,15 +135,12 @@ def generate_app_shell():
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <span class="w3-bar-item w3-right">Antigravity Analysis</span>
+  <span class="w3-bar-item w3-right">Stock Market Analysis</span>
 </div>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:260px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
-    <div class="w3-col s12 w3-bar">
-      <span>Welcome, <strong>User</strong></span><br>
-    </div>
   </div>
   <hr>
   <div class="w3-container">

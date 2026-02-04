@@ -1,7 +1,7 @@
 {
   "dma": {
-    "name": "Strategy I: Dual Moving Average (DMA)",
-    "description": "This strategy uses two Moving Averages (MA) to determine trend direction. A buy signal is generated when the short-term MA crosses above the long-term MA. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period.",
+    "name": "Strategy I (US)",
+    "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period.",
     "dates": [
       {
         "date": "2026-02-04",
@@ -183,8 +183,8 @@
     "dates": []
   },
   "pv": {
-    "name": "Peak Valley",
-    "description": "A price-action based strategy that identifies peaks and valleys to determine trend reversals and continuation patterns.",
+    "name": "Peak Valley (US)",
+    "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength.",
     "dates": [
       {
         "date": "2026-01-03",
