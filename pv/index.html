@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pv Reports</title>
+    <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f4f6f8; color: #333; }
+    h1 { color: #2c3e50; border-bottom: 2px solid #009879; padding-bottom: 10px; }
+    h2 { color: #009879; margin-top: 30px; }
+    
+    /* Navigation */
+    .nav { background: #ffffff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 25px; }
+    .nav a { margin-right: 20px; text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 1.05em; transition: color 0.2s; }
+    .nav a:hover { color: #009879; }
+    .nav span { margin-right: 20px; color: #999; }
+
+    /* Tables */
+    table { border-collapse: collapse; width: 100%; margin: 25px 0; font-size: 0.95em; min-width: 400px;
+            background: #fff; box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); border-radius: 8px; overflow: hidden; }
+    thead tr { background-color: #009879; color: #ffffff; text-align: left; }
+    th, td { padding: 12px 15px; }
+    tbody tr { border-bottom: 1px solid #dddddd; }
+    tbody tr:nth-of-type(even) { background-color: #f8f9fa; }
+    tbody tr:last-of-type { border-bottom: 2px solid #009879; }
+    tbody tr:hover { background-color: #f1f1f1; cursor: default; }
+
+    /* Signal Coloring */
+    .signal-buy { color: #27ae60; font-weight: bold; }
+    .signal-sell { color: #c0392b; font-weight: bold; }
+    .signal-hold { color: #7f8c8d; font-weight: bold; }
+
+    /* Gallery */
+    .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .gallery-item { background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: fit-content; text-align: center; }
+    .gallery img { max-width: 100%; height: auto; border-radius: 4px; display: block; }
+    .gallery h3 { margin: 10px 0 5px; font-size: 1em; color: #555; }
+    
+    /* Index List */
+    .date-list { list-style: none; padding: 0; }
+    .date-row { display: flex; align-items: center; background: #fff; margin-bottom: 10px; padding: 15px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .date-label { font-weight: bold; font-size: 1.1em; width: 150px; color: #2c3e50; }
+    .date-actions a { display: inline-block; padding: 6px 12px; margin-right: 10px; border-radius: 4px; text-decoration: none; font-size: 0.9em; transition: background 0.2s; }
+    .btn-output { background-color: #e8f6f3; color: #009879; border: 1px solid #009879; }
+    .btn-output:hover { background-color: #009879; color: #fff; }
+    .btn-forward { background-color: #fdf2e9; color: #d35400; border: 1px solid #d35400; }
+    .btn-forward:hover { background-color: #d35400; color: #fff; }
+    .btn-disabled { background-color: #eee; color: #aaa; border: 1px solid #ddd; pointer-events: none; }
+</style>
+</head>
+<body>
+    <div class="nav">
+        <a href="../../index.html">Home</a>
+<span>pv Index</span></div><h1>pv Reports</h1><ul class="date-list"><li class="date-row"><div class="date-label">2026-01-03</div><div class="date-actions"><a href="2026-01-03/output/index.html" class="btn-output">View Output</a><a href="#" class="btn-disabled">No Charts</a></div></li></ul>
+</body>
+</html>
