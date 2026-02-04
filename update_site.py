@@ -32,6 +32,90 @@ STRATEGY_DESCRIPTIONS = {
     }
 }
 
+
+# Legal Page Content
+LEGAL_PAGES = {
+    "privacy": {
+        "title": "Privacy Policy",
+        "content": """
+            <h3>1. Information Collection</h3>
+            <p>We do not collect personal information from our users. This site is for informational purposes only.</p>
+            <h3>2. Cookies</h3>
+            <p>This site may use cookies to improve user experience. By using our site, you consent to all cookies in accordance with our Cookie Policy.</p>
+            <h3>3. Third-Party Links</h3>
+            <p>Our site may contain links to third-party websites. We are not responsible for the privacy practices of those sites.</p>
+        """
+    },
+    "terms": {
+        "title": "Terms and Conditions",
+        "content": """
+            <h3>1. Educational Purpose Only</h3>
+            <p>The content provided on this website is for educational and informational purposes only. It does not constitute financial advice.</p>
+            <h3>2. Risk Disclosure</h3>
+            <p>Trading financial instruments involves high risk. You use the information on this site at your own risk.</p>
+            <h3>3. No Liability</h3>
+            <p>We are not liable for any losses or damages arising from the use of this website.</p>
+        """
+    },
+    "about": {
+        "title": "About Us",
+        "content": """
+            <h3>Our Mission</h3>
+            <p>Stock Market Analysis is dedicated to providing transparent, data-driven insights into market trends using advanced algorithmic strategies.</p>
+            <h3>Our Methodology</h3>
+            <p>We utilize a combination of technical indicators (RSI, MACD) and machine learning models (HMM) to analyze market regimes and identify potential opportunities.</p>
+        """
+    },
+    "contact": {
+        "title": "Contact Us",
+        "content": """
+            <h3>Get in Touch</h3>
+            <p>If you have questions or feedback about our analysis, please contact us.</p>
+            <p><b>Email:</b> contact@example.com</p>
+            <p><b>Address:</b> 123 Market Street, Suite 100, City, Country</p>
+        """
+    }
+}
+
+def generate_legal_pages():
+    """Generates static legal pages"""
+    template = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} - Stock Market Analysis</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>html,body,h1,h2,h3,h4,h5 {{font-family: "Raleway", sans-serif}}</style>
+</head>
+<body class="w3-light-grey">
+
+<div class="w3-bar w3-black w3-large">
+  <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+  <span class="w3-bar-item w3-right">Stock Market Analysis</span>
+</div>
+
+<div class="w3-content w3-white w3-card w3-padding-large" style="max-width:800px;margin-top:20px;margin-bottom:20px">
+    <h1>{title}</h1>
+    <hr>
+    {content}
+</div>
+
+<footer class="w3-container w3-padding-16 w3-center w3-light-grey">
+    <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
+"""
+    for page, data in LEGAL_PAGES.items():
+        html = template.format(title=data["title"], content=data["content"])
+        with open(f"{page}.html", "w") as f:
+            f.write(html)
+    print("Generated legal pages")
+
 def generate_manifest():
     """Scans directories and builds the manifest.json"""
     manifest = {}
@@ -190,6 +274,7 @@ def generate_app_shell():
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
+    <p><a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
@@ -411,6 +496,7 @@ async function loadReport(strategyKey, dateItem) {
 def main():
     print("Starting site update...")
     generate_manifest()
+    generate_legal_pages()
     generate_app_shell()
     print("Site update complete.")
 
