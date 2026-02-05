@@ -12,7 +12,7 @@ ROOT_DIR = "."
 STRATEGY_DESCRIPTIONS = {
     "dma": {
         "title": "Strategy I (US)",
-        "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period."
+        "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period."
     },
     "dma_bo": {
         "title": "Strategy I (India)",
@@ -28,7 +28,7 @@ STRATEGY_DESCRIPTIONS = {
     },
     "pv": {
         "title": "Peak Valley (US)",
-        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength."
+        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>."
     }
 }
 
@@ -86,7 +86,7 @@ def generate_legal_pages():
     <title>{title} - Stock Market Analysis</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>html,body,h1,h2,h3,h4,h5 {{font-family: "Raleway", sans-serif}}</style>
+    <style>html,body,h1,h2,h3,h4,h5 {{font-family: "Roboto", sans-serif}}</style>
 </head>
 <body class="w3-light-grey">
 
@@ -176,7 +176,7 @@ def generate_app_shell():
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+        html,body,h1,h2,h3,h4,h5 {font-family: "Roboto", sans-serif}
         .w3-bar-block .w3-bar-item {padding: 16px}
         
         /* Custom Styles */
@@ -243,7 +243,7 @@ def generate_app_shell():
 
   <!-- Header -->
   <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> <span id="page-title">Select a Strategy</span></b></h5>
+    <h5><b><span id="page-title">Select a Strategy</span></b></h5>
   </header>
 
   <div id="dashboard-content" class="w3-container hidden">
