@@ -267,7 +267,7 @@ def generate_app_shell():
   </div>
   
   <div id="placeholder-msg" class="w3-container w3-padding-32 w3-center">
-      <h3><i class="fa fa-arrow-left"></i> Click a date in the sidebar to view reports.</h3>
+      <h3>Reports are updated every day. Click a date (last 10 days) in the sidebar to view reports.</h3>
   </div>
 
   <!-- Footer -->
