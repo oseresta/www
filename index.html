@@ -226,23 +226,76 @@ function openTab(evt, tabName) {
 function jsonToTable(data) {
     if (!data || data.length === 0) return "<p>No data available.</p>";
     
-    // Get headers
-    const headers = Object.keys(data[0]);
+    // Columns to exclude
+    const excluded = ["Model", "Strategy", "Best_Window", "Metric_Value", "Metric_Type", "Sentiment_Score", "timestamp"];
+    
+    // Get headers, filtering out excluded ones
+    const allHeaders = Object.keys(data[0]);
+    const headers = allHeaders.filter(h => !excluded.includes(h));
     
     let html = '<table class="analysis-table w3-table-all w3-hoverable">';
-    html += '<thead><tr class="w3-green">';
-    headers.forEach(h => html += `<th>${h}</th>`);
+    html += '<thead><tr class="w3-light-grey">';
+    headers.forEach(h => {
+        // Replace underscores with spaces and Capitalize Each Word
+        let displayHeader = h.replace(/_/g, " ").replace(/\w/g, l => l.toUpperCase());
+        // Specific override for RSI and MACD
+        if (h.toLowerCase() === 'rsi') displayHeader = "RSI";
+        if (h.toLowerCase() === 'macd') displayHeader = "MACD";
+        if (h.toLowerCase() === 'mtf_trend') displayHeader = "MTF Trend";
+        if (h.toLowerCase() === 'adx') displayHeader = "ADX";
+        html += `<th>${displayHeader}</th>`;
+    });
     html += '</tr></thead><tbody>';
     
     data.forEach(row => {
         html += '<tr>';
         headers.forEach(h => {
             let val = row[h];
+            
+            // Handle RSI object: show status only
+            if (h.toLowerCase() === 'rsi' && val && typeof val === 'object' && val.status) {
+                val = val.status;
+            }
+            
+            // Handle MACD object: show crossover only
+            if (h.toLowerCase() === 'macd' && val && typeof val === 'object' && val.crossover) {
+                val = val.crossover;
+            }
+            
+            // Handle Trend/MTF Trend object: show status only
+            if ((h.toLowerCase() === 'trend' || h.toLowerCase() === 'mtf_trend') && val && typeof val === 'object' && val.status) {
+                val = val.status;
+            }
+            
+            // Handle ADX object: show status only
+            if (h.toLowerCase() === 'adx' && val && typeof val === 'object' && val.status) {
+                val = val.status;
+            }
+            
+            // Handle Divergence object
+            if (h.toLowerCase() === 'divergence' && val && typeof val === 'object') {
+                if (val.bullish) val = "Bullish";
+                else if (val.bearish) val = "Bearish";
+                else val = "None";
+            }
+            
+            // Handle Stops object
+            if (h.toLowerCase() === 'stops' && val && typeof val === 'object') {
+                const sl = val.stop_loss ? val.stop_loss.toFixed(2) : 'N/A';
+                const tp = val.take_profit ? val.take_profit.toFixed(2) : 'N/A';
+                val = `SL: ${sl} | TP: ${tp}`;
+            }
+
             if (h === 'Signal' && val) {
                 val = `<span class="signal-${val}">${val}</span>`;
             }
-            if (val === null) val = "";
+            if (val === null || val === undefined) val = "";
             
+            // Check if object (and not handled above)
+            if (typeof val === 'object') {
+                val = JSON.stringify(val); // Fallback to avoid [object Object]
+            }
+
             // Format numbers
             if (typeof val === 'number') {
                 val = val.toFixed(2);
@@ -267,6 +320,15 @@ async function loadReport(strategyKey, dateItem) {
     document.getElementById("page-title").innerText = `${strat.name} - ${dateItem.date}`;
     document.getElementById("strategy-desc").innerHTML = strat.description;
     
+    // Toggle Forward Tab visibility
+    const forwardBtn = document.querySelector("button[onclick*='Forward']");
+    if (strategyKey === 'pv') {
+        forwardBtn.style.display = 'none';
+        // Ensure we don't end up on a hidden tab if coming from another view
+    } else {
+        forwardBtn.style.display = 'block';
+    }
+    
     // 1. Load Summary
     const summaryDiv = document.getElementById("Summary");
     if (dateItem.has_output && dateItem.output_file) {
@@ -285,23 +347,23 @@ async function loadReport(strategyKey, dateItem) {
     }
     
     // 2. Load Gallery
+    // Only load if visible/applicable to save resources, though it doesn't hurt.
     const galleryDiv = document.getElementById("gallery-container");
     galleryDiv.innerHTML = "";
-    if (dateItem.images && dateItem.images.length > 0) {
-        dateItem.images.forEach(img => {
-            const div = document.createElement("div");
-            div.className = "gallery-item";
-            const imgName = img.split('/').pop();
-            div.innerHTML = `
-                <img src="${img}" alt="${imgName}" onclick="window.open(this.src)">
-                <div class="w3-container w3-white">
-                  <p><b>${imgName}</b></p>
-                </div>
-            `;
-            galleryDiv.appendChild(div);
-        });
-    } else {
-        galleryDiv.innerHTML = "<p>No images found in forward folder.</p>";
+    if (strategyKey !== 'pv') {
+        if (dateItem.images && dateItem.images.length > 0) {
+            dateItem.images.forEach(img => {
+                const div = document.createElement("div");
+                div.className = "gallery-item";
+                const imgName = img.split('/').pop();
+                div.innerHTML = `
+                    <img src="${img}" alt="${imgName}" onclick="window.open(this.src)">
+                `;
+                galleryDiv.appendChild(div);
+            });
+        } else {
+            galleryDiv.innerHTML = "<p>No images found in forward folder.</p>";
+        }
     }
     
     // Reset to Summary Tab
@@ -310,6 +372,7 @@ async function loadReport(strategyKey, dateItem) {
     document.querySelector(".tablink").classList.add("w3-red"); 
     // Ensure others are not red (simple reset)
     const links = document.querySelectorAll(".tablink");
+    // links[0] is Summary, links[1] is Forward. 
     links[1].classList.remove("w3-red");
     links[0].classList.add("w3-red");
 }
