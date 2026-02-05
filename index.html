@@ -236,7 +236,10 @@ function jsonToTable(data) {
     html += '<thead><tr class="w3-light-grey">';
     headers.forEach(h => {
         // Replace underscores with spaces and Capitalize Each Word
-        let displayHeader = h.replace(/_/g, " ").replace(/\w/g, l => l.toUpperCase());
+        let displayHeader = h.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+        // Specific override for Ticker and Price
+        if (h.toLowerCase() === 'ticker') displayHeader = "Ticker";
+        if (h.toLowerCase() === 'current_price') displayHeader = "Current Price";
         // Specific override for RSI and MACD
         if (h.toLowerCase() === 'rsi') displayHeader = "RSI";
         if (h.toLowerCase() === 'macd') displayHeader = "MACD";
