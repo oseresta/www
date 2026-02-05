@@ -71,8 +71,7 @@ LEGAL_PAGES = {
         "content": """
             <h3>Get in Touch</h3>
             <p>If you have questions or feedback about our analysis, please contact us.</p>
-            <p><b>Email:</b> contact@example.com</p>
-            <p><b>Address:</b> 123 Market Street, Suite 100, City, Country</p>
+            <p><b>Email:</b> oseresta@gmail.com</p>
         """
     }
 }
@@ -104,7 +103,6 @@ def generate_legal_pages():
 
 <footer class="w3-container w3-padding-16 w3-center w3-light-grey">
     <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 </body>
@@ -275,7 +273,6 @@ def generate_app_shell():
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <p><a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
   <!-- End page content -->
