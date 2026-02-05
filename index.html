@@ -287,6 +287,11 @@ function jsonToTable(data) {
                 const tp = val.take_profit ? val.take_profit.toFixed(2) : 'N/A';
                 val = `SL: ${sl} | TP: ${tp}`;
             }
+            
+            // Handle Arrays (e.g. Reasons): Join with comma
+            if (Array.isArray(val)) {
+                val = val.join(', ');
+            }
 
             if (h === 'Signal' && val) {
                 val = `<span class="signal-${val}">${val}</span>`;
