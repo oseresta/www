@@ -173,6 +173,9 @@ def generate_app_shell():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Analysis Dashboard</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -285,7 +288,7 @@ let manifest = {};
 // Init
 window.onload = async function() {
     try {
-        const response = await fetch('manifest.json');
+        const response = await fetch('manifest.json?v=' + new Date().getTime());
         manifest = await response.json();
         renderSidebar();
     } catch (e) {
@@ -510,7 +513,7 @@ async function loadReport(strategyKey, dateItem) {
     if (dateItem.has_output && dateItem.output_file) {
         summaryDiv.innerHTML = '<p><i class="fa fa-spinner fa-spin"></i> Loading table...</p>';
         try {
-            const res = await fetch(dateItem.output_file);
+            const res = await fetch(dateItem.output_file + '?v=' + new Date().getTime());
             const json = await res.json();
             // Handle array or single dict wrap
             const data = Array.isArray(json) ? json : [json];
