@@ -8,7 +8,8 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html,body,h1,h2,h3,h4,h5 {font-family: "Roboto", sans-serif}
         .w3-bar-block .w3-bar-item {padding: 16px}
@@ -38,21 +39,95 @@
             .w3-sidebar { display: none; z-index: 5; }
         }
         
+        /* Share Buttons */
+        .share-btn {
+            cursor: pointer;
+            margin-left: 10px;
+            transition: opacity 0.3s;
+        }
+        .share-btn:hover { opacity: 0.8; }
+        
         /* Loading Overlay */
         #loader {
             position: fixed; left: 0; top: 0; width: 100%; height: 100%;
             background: rgba(255,255,255,0.8); z-index: 9999;
             display: flex; justify-content: center; align-items: center;
         }
+
+        /* Toast Notification */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 10000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 17px;
+        }
+
+        #toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;} 
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+            from {bottom: 30px; opacity: 1;} 
+            to {bottom: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+        /* Force X icon color */
+        .fa-x-twitter { color: #ffffff !important; }
     </style>
 </head>
 <body class="w3-light-grey">
 
+<!-- Toast Notification -->
+<div id="toast">Link copied to clipboard!</div>
+
 <!-- Top container -->
-<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <span class="w3-bar-item w3-right">Stock Market Analysis</span>
-  <button class="w3-bar-item w3-button w3-right w3-hover-none w3-hover-text-light-grey w3-hide-small" onclick="document.getElementById('subscribeModal').style.display='block'"><i class="fa fa-envelope"></i> Subscribe</button>
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4; display: flex; align-items: center; justify-content: space-between; padding: 0 10px;">
+  <div style="display: flex; align-items: center;">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa-solid fa-bars"></i> Menu</button>
+      <span class="w3-bar-item">Stock Market Analysis</span>
+  </div>
+  
+  <div style="display: flex; align-items: center;">
+      <!-- Share Buttons -->
+      <span class="w3-hide-small w3-text-grey" style="margin-right: 10px; font-size: 14px;">Share:</span>
+      <button class="w3-button w3-hover-none w3-hover-text-light-grey w3-text-white share-btn" onclick="shareTo('x')" title="Share on X">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" style="fill: white !important; vertical-align: middle;">
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+        </svg>
+      </button>
+      <button class="w3-button w3-hover-none w3-hover-text-light-grey share-btn" onclick="shareTo('facebook')" title="Share on Facebook"><i class="fa-brands fa-facebook"></i></button>
+      <button class="w3-button w3-hover-none w3-hover-text-light-grey share-btn" onclick="shareTo('instagram')" title="Copy Link for Instagram"><i class="fa-brands fa-instagram"></i></button>
+      <button class="w3-button w3-hover-none w3-hover-text-light-grey share-btn" onclick="shareTo('tiktok')" title="Copy Link for TikTok"><i class="fa-brands fa-tiktok"></i></button>
+      
+      <!-- Subscribe Button -->
+      <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey w3-hide-small" onclick="document.getElementById('subscribeModal').style.display='block'" style="margin-left: 15px; border-left: 1px solid #555;"><i class="fa-solid fa-envelope"></i> Subscribe</button>
+  </div>
 </div>
 
 <!-- Sidebar/menu -->
@@ -64,7 +139,7 @@
     <h5>Dashboard</h5>
   </div>
   <div class="w3-bar-block" id="nav-container">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa-solid fa-xmark fa-fw"></i>  Close Menu</a>
     <!-- Navigation will be populated here -->
   </div>
 </nav>
@@ -107,7 +182,7 @@
   </div>
   
   <div id="placeholder-msg" class="w3-container w3-padding-32 w3-center">
-      <h3><i class="fa fa-arrow-left"></i> Reports are updated every day. Click a date (last 10 days) in the sidebar to view reports.</h3>
+      <h3><i class="fa-solid fa-arrow-left"></i> Reports are updated every day. Click a date (last 10 days) in the sidebar to view reports.</h3>
   </div>
 
   <!-- Footer -->
@@ -133,7 +208,7 @@
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd_IjFV5jOAmzE0RArcp-laGisCG-vnXnEV7k28cFQsleU5g/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             <br>
             <p>Having trouble viewing the form?</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScd_IjFV5jOAmzE0RArcp-laGisCG-vnXnEV7k28cFQsleU5g/viewform?usp=sf_link" target="_blank" class="w3-button w3-black"><i class="fa fa-external-link"></i> Open in New Tab</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScd_IjFV5jOAmzE0RArcp-laGisCG-vnXnEV7k28cFQsleU5g/viewform?usp=sf_link" target="_blank" class="w3-button w3-black"><i class="fa-solid fa-up-right-from-square"></i> Open in New Tab</a>
         </div>
       </div>
       <footer class="w3-container w3-teal w3-padding">
@@ -167,7 +242,7 @@ function renderSidebar() {
     container.innerHTML = "";
     
     // Close button for mobile
-    container.innerHTML += '<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i> Close Menu</a>';
+    container.innerHTML += '<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa-solid fa-xmark fa-fw"></i> Close Menu</a>';
     
     for (const [key, strategy] of Object.entries(manifest)) {
         if (!strategy.dates || strategy.dates.length === 0) continue;
@@ -175,7 +250,7 @@ function renderSidebar() {
         // Strategy Header (Accordion Trigger)
         const btn = document.createElement("button");
         btn.className = "w3-button w3-block w3-left-align w3-hover-light-grey";
-        btn.innerHTML = `<i class="fa fa-line-chart fa-fw"></i> ${strategy.name} <i class="fa fa-caret-down"></i>`;
+        btn.innerHTML = `<i class="fa-solid fa-chart-line fa-fw"></i> ${strategy.name} <i class="fa-solid fa-caret-down"></i>`;
         
         const divId = `nav-${key}`;
         btn.onclick = () => myAccFunc(divId);
@@ -192,7 +267,7 @@ function renderSidebar() {
             link.href = "#";
             link.className = "w3-bar-item w3-button w3-padding-small";
             link.style.paddingLeft = "24px"; // Indent
-            link.innerHTML = `<i class="fa fa-calendar fa-fw"></i> ${item.date}`;
+            link.innerHTML = `<i class="fa-solid fa-calendar fa-fw"></i> ${item.date}`;
             link.onclick = (e) => {
                 e.preventDefault();
                 loadReport(key, item);
@@ -255,6 +330,35 @@ function openTab(evt, tabName) {
   }
   document.getElementById(tabName).style.display = "block";
   if(evt && evt.currentTarget) evt.currentTarget.className += " w3-red";
+}
+
+// Share Functionality
+function shareTo(platform) {
+    const url = window.location.href;
+    const text = "Check out this stock analysis report: " + document.title;
+    let shareUrl = "";
+
+    switch(platform) {
+        case 'x':
+            shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+            break;
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+            break;
+        case 'instagram':
+        case 'tiktok':
+            // Copy to clipboard
+            navigator.clipboard.writeText(url).then(function() {
+                var toast = document.getElementById("toast");
+                toast.className = "show";
+                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+            break;
+    }
 }
 
 // Helper: Format JSON Table
@@ -434,6 +538,5 @@ async function loadReport(strategyKey, dateItem) {
     document.querySelector(".tablink").classList.add("w3-red"); 
 }
 </script>
-
 </body>
 </html>
