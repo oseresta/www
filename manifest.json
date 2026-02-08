@@ -1,13 +1,13 @@
 {
   "dma": {
     "name": "Strategy I (US)",
-    "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period.",
+    "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period. Forward Testing serves as a real-time validation mechanism that is updated daily. It operates on the strict assumption that every buy signal results in a trade executed at the daily closing price. This ensures that the performance metrics reflect a realistic and consistent execution model, free from look-ahead bias, by treating every signal as a definitive action taken at the market close.",
     "dates": [
       {
         "date": "2026-02-06",
         "has_output": true,
         "output_file": "dma/2026-02-06/output/output.json",
-        "images": [
+        "forward_images": [
           "dma/2026-02-06/forward/forward_test_AAPL.png",
           "dma/2026-02-06/forward/forward_test_ABBV.png",
           "dma/2026-02-06/forward/forward_test_ABT.png",
@@ -84,13 +84,14 @@
           "dma/2026-02-06/forward/forward_test_V.png",
           "dma/2026-02-06/forward/forward_test_VZ.png",
           "dma/2026-02-06/forward/forward_test_WFC.png"
-        ]
+        ],
+        "backward_images": []
       },
       {
         "date": "2026-02-05",
         "has_output": true,
         "output_file": "dma/2026-02-05/output/output.json",
-        "images": [
+        "forward_images": [
           "dma/2026-02-05/forward/forward_test_AAPL.png",
           "dma/2026-02-05/forward/forward_test_ABBV.png",
           "dma/2026-02-05/forward/forward_test_ABT.png",
@@ -167,13 +168,14 @@
           "dma/2026-02-05/forward/forward_test_V.png",
           "dma/2026-02-05/forward/forward_test_VZ.png",
           "dma/2026-02-05/forward/forward_test_WFC.png"
-        ]
+        ],
+        "backward_images": []
       },
       {
         "date": "2026-02-04",
         "has_output": false,
         "output_file": null,
-        "images": [
+        "forward_images": [
           "dma/2026-02-04/forward/forward_test_AAPL.png",
           "dma/2026-02-04/forward/forward_test_ABBV.png",
           "dma/2026-02-04/forward/forward_test_ABT.png",
@@ -248,13 +250,14 @@
           "dma/2026-02-04/forward/forward_test_V.png",
           "dma/2026-02-04/forward/forward_test_VZ.png",
           "dma/2026-02-04/forward/forward_test_WFC.png"
-        ]
+        ],
+        "backward_images": []
       },
       {
         "date": "2026-01-03",
         "has_output": true,
         "output_file": "dma/2026-01-03/output/output.json",
-        "images": [
+        "forward_images": [
           "dma/2026-01-03/forward/forward_test_AAPL.png",
           "dma/2026-01-03/forward/forward_test_ABBV.png",
           "dma/2026-01-03/forward/forward_test_ABT.png",
@@ -329,7 +332,8 @@
           "dma/2026-01-03/forward/forward_test_V.png",
           "dma/2026-01-03/forward/forward_test_VZ.png",
           "dma/2026-01-03/forward/forward_test_WFC.png"
-        ]
+        ],
+        "backward_images": []
       }
     ]
   },
@@ -356,19 +360,91 @@
         "date": "2026-02-06",
         "has_output": true,
         "output_file": "pv/2026-02-06/output/output.json",
-        "images": []
+        "forward_images": [],
+        "backward_images": [
+          "pv/2026-02-06/backward/ABBV_backtest.png",
+          "pv/2026-02-06/backward/ABT_backtest.png",
+          "pv/2026-02-06/backward/ADI_backtest.png",
+          "pv/2026-02-06/backward/AMAT_backtest.png",
+          "pv/2026-02-06/backward/AMZN_backtest.png",
+          "pv/2026-02-06/backward/APP_backtest.png",
+          "pv/2026-02-06/backward/AVGO_backtest.png",
+          "pv/2026-02-06/backward/BAC_backtest.png",
+          "pv/2026-02-06/backward/BLK_backtest.png",
+          "pv/2026-02-06/backward/BRK-B_backtest.png",
+          "pv/2026-02-06/backward/BSX_backtest.png",
+          "pv/2026-02-06/backward/CAT_backtest.png",
+          "pv/2026-02-06/backward/CI_backtest.png",
+          "pv/2026-02-06/backward/CMG_backtest.png",
+          "pv/2026-02-06/backward/COIN_backtest.png",
+          "pv/2026-02-06/backward/COP_backtest.png",
+          "pv/2026-02-06/backward/COST_backtest.png",
+          "pv/2026-02-06/backward/CSCO_backtest.png",
+          "pv/2026-02-06/backward/CVX_backtest.png",
+          "pv/2026-02-06/backward/DE_backtest.png",
+          "pv/2026-02-06/backward/ETN_backtest.png",
+          "pv/2026-02-06/backward/GE_backtest.png",
+          "pv/2026-02-06/backward/GILD_backtest.png",
+          "pv/2026-02-06/backward/GS_backtest.png",
+          "pv/2026-02-06/backward/HD_backtest.png",
+          "pv/2026-02-06/backward/HON_backtest.png",
+          "pv/2026-02-06/backward/HOOD_backtest.png",
+          "pv/2026-02-06/backward/IBM_backtest.png",
+          "pv/2026-02-06/backward/JPM_backtest.png",
+          "pv/2026-02-06/backward/KLAC_backtest.png",
+          "pv/2026-02-06/backward/KO_backtest.png",
+          "pv/2026-02-06/backward/LLY_backtest.png",
+          "pv/2026-02-06/backward/LOW_backtest.png",
+          "pv/2026-02-06/backward/LRCX_backtest.png",
+          "pv/2026-02-06/backward/MA_backtest.png",
+          "pv/2026-02-06/backward/MCD_backtest.png",
+          "pv/2026-02-06/backward/MCS_backtest.png",
+          "pv/2026-02-06/backward/META_backtest.png",
+          "pv/2026-02-06/backward/MO_backtest.png",
+          "pv/2026-02-06/backward/MRK_backtest.png",
+          "pv/2026-02-06/backward/MS_backtest.png",
+          "pv/2026-02-06/backward/MU_backtest.png",
+          "pv/2026-02-06/backward/NEE_backtest.png",
+          "pv/2026-02-06/backward/NFLX_backtest.png",
+          "pv/2026-02-06/backward/NVDA_backtest.png",
+          "pv/2026-02-06/backward/PANW_backtest.png",
+          "pv/2026-02-06/backward/PG_backtest.png",
+          "pv/2026-02-06/backward/PLD_backtest.png",
+          "pv/2026-02-06/backward/PLTR_backtest.png",
+          "pv/2026-02-06/backward/PM_backtest.png",
+          "pv/2026-02-06/backward/QCOM_backtest.png",
+          "pv/2026-02-06/backward/RTX_backtest.png",
+          "pv/2026-02-06/backward/SBUX_backtest.png",
+          "pv/2026-02-06/backward/SCHW_backtest.png",
+          "pv/2026-02-06/backward/SPGI_backtest.png",
+          "pv/2026-02-06/backward/SYK_backtest.png",
+          "pv/2026-02-06/backward/TJX_backtest.png",
+          "pv/2026-02-06/backward/TMUS_backtest.png",
+          "pv/2026-02-06/backward/TSLA_backtest.png",
+          "pv/2026-02-06/backward/TXN_backtest.png",
+          "pv/2026-02-06/backward/T_backtest.png",
+          "pv/2026-02-06/backward/UNH_backtest.png",
+          "pv/2026-02-06/backward/UNP_backtest.png",
+          "pv/2026-02-06/backward/VRTX_backtest.png",
+          "pv/2026-02-06/backward/V_backtest.png",
+          "pv/2026-02-06/backward/WFC_backtest.png",
+          "pv/2026-02-06/backward/WMT_backtest.png",
+          "pv/2026-02-06/backward/XOM_backtest.png"
+        ]
       },
       {
         "date": "2026-02-05",
         "has_output": true,
         "output_file": "pv/2026-02-05/output/output.json",
-        "images": []
+        "forward_images": [],
+        "backward_images": []
       },
       {
         "date": "2026-01-03",
         "has_output": true,
         "output_file": "pv/2026-01-03/output/output.json",
-        "images": []
+        "forward_images": [],
+        "backward_images": []
       }
     ]
   }

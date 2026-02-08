@@ -12,7 +12,7 @@ ROOT_DIR = "."
 STRATEGY_DESCRIPTIONS = {
     "dma": {
         "title": "Strategy I (US)",
-        "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period."
+        "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period. Forward Testing serves as a real-time validation mechanism that is updated daily. It operates on the strict assumption that every buy signal results in a trade executed at the daily closing price. This ensures that the performance metrics reflect a realistic and consistent execution model, free from look-ahead bias, by treating every signal as a definitive action taken at the market close."
     },
     "dma_bo": {
         "title": "Strategy I (India)",
@@ -138,21 +138,28 @@ def generate_manifest():
             # Check for data
             output_dir = os.path.join(full_path, "output")
             forward_dir = os.path.join(full_path, "forward")
+            backward_dir = os.path.join(full_path, "backward")
             
             output_json = os.path.join(output_dir, "output.json")
             has_output = os.path.exists(output_json)
             
-            images = []
+            forward_images = []
             if os.path.isdir(forward_dir):
                 for img in sorted(glob.glob(os.path.join(forward_dir, "*.png"))):
-                    images.append(os.path.basename(img))
+                    forward_images.append(os.path.basename(img))
+
+            backward_images = []
+            if os.path.isdir(backward_dir):
+                for img in sorted(glob.glob(os.path.join(backward_dir, "*.png"))):
+                    backward_images.append(os.path.basename(img))
             
-            if has_output or images:
+            if has_output or forward_images or backward_images:
                 dates_data.append({
                     "date": date_folder,
                     "has_output": has_output,
                     "output_file": f"{strategy}/{date_folder}/output/output.json" if has_output else None,
-                    "images": [f"{strategy}/{date_folder}/forward/{img}" for img in images]
+                    "forward_images": [f"{strategy}/{date_folder}/forward/{img}" for img in forward_images],
+                    "backward_images": [f"{strategy}/{date_folder}/backward/{img}" for img in backward_images]
                 })
 
         # Sort dates descending
@@ -221,6 +228,7 @@ def generate_app_shell():
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
   <span class="w3-bar-item w3-right">Stock Market Analysis</span>
+  <button class="w3-bar-item w3-button w3-right w3-hover-none w3-hover-text-light-grey w3-hide-small" onclick="document.getElementById('subscribeModal').style.display='block'"><i class="fa fa-envelope"></i> Subscribe</button>
 </div>
 
 <!-- Sidebar/menu -->
@@ -257,7 +265,8 @@ def generate_app_shell():
 
       <div class="w3-bar w3-black">
         <button class="w3-bar-item w3-button tablink w3-red" onclick="openTab(event,'Summary')">Summary</button>
-        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Forward')">Forward Testing</button>
+        <button class="w3-bar-item w3-button tablink" id="btn-forward" onclick="openTab(event,'Forward')">Forward Testing</button>
+        <button class="w3-bar-item w3-button tablink" id="btn-backward" onclick="openTab(event,'Backward')" style="display:none">Backward Testing</button>
       </div>
       
       <div id="Summary" class="w3-container tab-content w3-white w3-padding-16">
@@ -265,7 +274,11 @@ def generate_app_shell():
       </div>
 
       <div id="Forward" class="w3-container tab-content w3-white w3-padding-16" style="display:none">
-        <div id="gallery-container" class="gallery-grid"></div>
+        <div id="gallery-forward" class="gallery-grid"></div>
+      </div>
+
+      <div id="Backward" class="w3-container tab-content w3-white w3-padding-16" style="display:none">
+        <div id="gallery-backward" class="gallery-grid"></div>
       </div>
   </div>
   
@@ -277,6 +290,33 @@ def generate_app_shell():
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <p><a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
   </footer>
+
+  <!-- Subscribe Modal -->
+  <div id="subscribeModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="max-width:600px">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('subscribeModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Subscribe to Alerts</h2>
+      </header>
+      <div class="w3-container w3-padding-large">
+        <p>Get notified when your favorite stocks trigger a Buy/Sell signal.</p>
+        <div class="w3-panel w3-pale-yellow w3-border">
+          <p><b>Note:</b> We use Google Forms to securely collect your preferences. Please fill out the form below.</p>
+        </div>
+        <!-- Placeholder for Google Form -->
+        <div class="w3-center w3-padding-16" style="background:#f1f1f1; border: 1px solid #ddd;">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScd_IjFV5jOAmzE0RArcp-laGisCG-vnXnEV7k28cFQsleU5g/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <br>
+            <p>Having trouble viewing the form?</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScd_IjFV5jOAmzE0RArcp-laGisCG-vnXnEV7k28cFQsleU5g/viewform?usp=sf_link" target="_blank" class="w3-button w3-black"><i class="fa fa-external-link"></i> Open in New Tab</a>
+        </div>
+      </div>
+      <footer class="w3-container w3-teal w3-padding">
+        <button class="w3-button w3-right w3-white w3-border" onclick="document.getElementById('subscribeModal').style.display='none'">Close</button>
+      </footer>
+    </div>
+  </div>
 
   <!-- End page content -->
 </div>
@@ -390,7 +430,7 @@ function openTab(evt, tabName) {
     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
   }
   document.getElementById(tabName).style.display = "block";
-  if(evt) evt.currentTarget.className += " w3-red";
+  if(evt && evt.currentTarget) evt.currentTarget.className += " w3-red";
 }
 
 // Helper: Format JSON Table
@@ -499,13 +539,16 @@ async function loadReport(strategyKey, dateItem) {
     document.getElementById("page-title").innerText = `${strat.name} - ${dateItem.date}`;
     document.getElementById("strategy-desc").innerHTML = strat.description;
     
-    // Toggle Forward Tab visibility
-    const forwardBtn = document.querySelector("button[onclick*='Forward']");
+    // Toggle Tabs
+    const btnForward = document.getElementById("btn-forward");
+    const btnBackward = document.getElementById("btn-backward");
+
     if (strategyKey === 'pv') {
-        forwardBtn.style.display = 'none';
-        // Ensure we don't end up on a hidden tab if coming from another view
+        btnForward.style.display = 'none';
+        btnBackward.style.display = 'block';
     } else {
-        forwardBtn.style.display = 'block';
+        btnForward.style.display = 'block';
+        btnBackward.style.display = 'none';
     }
     
     // 1. Load Summary
@@ -525,35 +568,46 @@ async function loadReport(strategyKey, dateItem) {
         summaryDiv.innerHTML = "<p>No Summary Data found for this date.</p>";
     }
     
-    // 2. Load Gallery
-    // Only load if visible/applicable to save resources, though it doesn't hurt.
-    const galleryDiv = document.getElementById("gallery-container");
-    galleryDiv.innerHTML = "";
-    if (strategyKey !== 'pv') {
-        if (dateItem.images && dateItem.images.length > 0) {
-            dateItem.images.forEach(img => {
+    // 2. Load Gallery (Forward or Backward)
+    const galleryForward = document.getElementById("gallery-forward");
+    galleryForward.innerHTML = "";
+    const galleryBackward = document.getElementById("gallery-backward");
+    galleryBackward.innerHTML = "";
+    
+    if (strategyKey === 'pv') {
+        // Load Backward Images
+        if (dateItem.backward_images && dateItem.backward_images.length > 0) {
+            dateItem.backward_images.forEach(img => {
+                const div = document.createElement("div");
+                div.className = "gallery-item";
+                // Get filename
+                const imgName = img.split('/').pop();
+                div.innerHTML = `<img src="${img}" alt="${imgName}" onclick="window.open(this.src)">`;
+                galleryBackward.appendChild(div);
+            });
+        } else {
+             galleryBackward.innerHTML = "<p>No backward testing plots found.</p>";
+        }
+    } else {
+        // Load Forward Images
+        if (dateItem.forward_images && dateItem.forward_images.length > 0) {
+            dateItem.forward_images.forEach(img => {
                 const div = document.createElement("div");
                 div.className = "gallery-item";
                 const imgName = img.split('/').pop();
-                div.innerHTML = `
-                    <img src="${img}" alt="${imgName}" onclick="window.open(this.src)">
-                `;
-                galleryDiv.appendChild(div);
+                div.innerHTML = `<img src="${img}" alt="${imgName}" onclick="window.open(this.src)">`;
+                galleryForward.appendChild(div);
             });
         } else {
-            galleryDiv.innerHTML = "<p>No images found in forward folder.</p>";
+            galleryForward.innerHTML = "<p>No forward testing plots found.</p>";
         }
     }
     
     // Reset to Summary Tab
     openTab(null, 'Summary');
     // Set active tab color manually since we passed null event
+    document.querySelectorAll(".tablink").forEach(el => el.classList.remove("w3-red"));
     document.querySelector(".tablink").classList.add("w3-red"); 
-    // Ensure others are not red (simple reset)
-    const links = document.querySelectorAll(".tablink");
-    // links[0] is Summary, links[1] is Forward. 
-    links[1].classList.remove("w3-red");
-    links[0].classList.add("w3-red");
 }
 </script>
 
