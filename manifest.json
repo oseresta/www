@@ -340,7 +340,33 @@
   "dma_bo": {
     "name": "Strategy I (India)",
     "description": "Implementation of the Dual Moving Average strategy specifically tuned for the Indian market indices. Follows the same logic as the standard DMA but may use different default windows.",
-    "dates": []
+    "dates": [
+      {
+        "date": "2026-02-04",
+        "has_output": true,
+        "output_file": "dma_bo/2026-02-04/output/output.json",
+        "forward_images": [
+          "dma_bo/2026-02-04/forward/forward_test_ADANIENT.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_BAJFINANCE.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_BHARTIARTL.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_HCLTECH.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_HDFCBANK.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_HINDUNILVR.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_ICICIBANK.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_INFY.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_ITC.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_KOTAKBANK.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_LICI.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_LT.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_M&M.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_MARUTI.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_RELIANCE.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_SUNPHARMA.BO.png",
+          "dma_bo/2026-02-04/forward/forward_test_TCS.BO.png"
+        ],
+        "backward_images": []
+      }
+    ]
   },
   "dma_hmm": {
     "name": "Strategy II: DMA + Hidden Markov Model",
