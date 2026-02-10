@@ -569,7 +569,17 @@ function jsonToTable(data, strategyKey) {
         if (h.toLowerCase() === 'macd') displayHeader = "MACD";
         if (h.toLowerCase() === 'mtf_trend') displayHeader = "MTF Trend";
         if (h.toLowerCase() === 'adx') displayHeader = "ADX";
-        html += `<th>${displayHeader}</th>`;
+        
+        // Responsive Classes for Peak Valley
+        let classList = "";
+        if (strategyKey === 'pv') {
+            const alwaysVisible = ['ticker', 'current_price', 'stops', 'action', 'signal'];
+            if (!alwaysVisible.includes(h.toLowerCase())) {
+                classList = "class='w3-hide-small w3-hide-medium'";
+            }
+        }
+        
+        html += `<th ${classList}>${displayHeader}</th>`;
     });
     html += '</tr></thead><tbody>';
     
@@ -577,6 +587,15 @@ function jsonToTable(data, strategyKey) {
         html += '<tr>';
         headers.forEach(h => {
             let val = row[h];
+            
+            // Responsive Classes for Peak Valley (Data Cells)
+            let classList = "";
+            if (strategyKey === 'pv') {
+                const alwaysVisible = ['ticker', 'current_price', 'stops', 'action', 'signal'];
+                if (!alwaysVisible.includes(h.toLowerCase())) {
+                    classList = "class='w3-hide-small w3-hide-medium'";
+                }
+            }
             
             // Handle RSI object: show status only
             if (h.toLowerCase() === 'rsi' && val && typeof val === 'object' && val.status) {
@@ -634,7 +653,7 @@ function jsonToTable(data, strategyKey) {
                 val = val.toFixed(2);
             }
             
-            html += `<td>${val}</td>`;
+            html += `<td ${classList}>${val}</td>`;
         });
         html += '</tr>';
     });
