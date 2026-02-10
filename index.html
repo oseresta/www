@@ -472,7 +472,7 @@ async function loadReport(strategyKey, dateItem) {
     const btnBackward = document.getElementById("btn-backward");
 
     if (strategyKey === 'pv') {
-        btnForward.style.display = 'none';
+        btnForward.style.display = 'block';
         btnBackward.style.display = 'block';
     } else {
         btnForward.style.display = 'block';
@@ -502,33 +502,31 @@ async function loadReport(strategyKey, dateItem) {
     const galleryBackward = document.getElementById("gallery-backward");
     galleryBackward.innerHTML = "";
     
-    if (strategyKey === 'pv') {
-        // Load Backward Images
-        if (dateItem.backward_images && dateItem.backward_images.length > 0) {
-            dateItem.backward_images.forEach(img => {
-                const div = document.createElement("div");
-                div.className = "gallery-item";
-                // Get filename
-                const imgName = img.split('/').pop();
-                div.innerHTML = `<img src="${img}" alt="${imgName}" onclick="window.open(this.src)">`;
-                galleryBackward.appendChild(div);
-            });
-        } else {
-             galleryBackward.innerHTML = "<p>No backward testing plots found.</p>";
-        }
+    // Load Backward Images (Always check)
+    if (dateItem.backward_images && dateItem.backward_images.length > 0) {
+        dateItem.backward_images.forEach(img => {
+            const div = document.createElement("div");
+            div.className = "gallery-item";
+            // Get filename
+            const imgName = img.split('/').pop();
+            div.innerHTML = `<img src="${img}" alt="${imgName}" onclick="window.open(this.src)">`;
+            galleryBackward.appendChild(div);
+        });
     } else {
-        // Load Forward Images
-        if (dateItem.forward_images && dateItem.forward_images.length > 0) {
-            dateItem.forward_images.forEach(img => {
-                const div = document.createElement("div");
-                div.className = "gallery-item";
-                const imgName = img.split('/').pop();
-                div.innerHTML = `<img src="${img}" alt="${imgName}" onclick="window.open(this.src)">`;
-                galleryForward.appendChild(div);
-            });
-        } else {
-            galleryForward.innerHTML = "<p>No forward testing plots found.</p>";
-        }
+            galleryBackward.innerHTML = "<p>No backward testing plots found.</p>";
+    }
+
+    // Load Forward Images (Always check)
+    if (dateItem.forward_images && dateItem.forward_images.length > 0) {
+        dateItem.forward_images.forEach(img => {
+            const div = document.createElement("div");
+            div.className = "gallery-item";
+            const imgName = img.split('/').pop();
+            div.innerHTML = `<img src="${img}" alt="${imgName}" onclick="window.open(this.src)">`;
+            galleryForward.appendChild(div);
+        });
+    } else {
+        galleryForward.innerHTML = "<p>No forward testing plots found.</p>";
     }
     
     // Reset to Summary Tab
