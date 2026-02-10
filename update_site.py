@@ -215,6 +215,10 @@ def generate_app_shell():
             .w3-sidebar { display: none; z-index: 5; }
         }
         
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+        
         /* Share Buttons */
         .share-btn {
             cursor: pointer;
@@ -302,7 +306,7 @@ def generate_app_shell():
       <button class="w3-button w3-hover-none w3-hover-text-light-grey share-btn" onclick="shareTo('tiktok')" title="Copy Link for TikTok"><i class="fa-brands fa-tiktok"></i></button>
       
       <!-- Subscribe Button -->
-      <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey w3-hide-small" onclick="document.getElementById('subscribeModal').style.display='block'" style="margin-left: 15px; border-left: 1px solid #555;"><i class="fa-solid fa-envelope"></i> Subscribe</button>
+      <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey" onclick="document.getElementById('subscribeModal').style.display='block'" style="margin-left: 15px; border-left: 1px solid #555;"><i class="fa-solid fa-envelope"></i> Subscribe</button>
   </div>
 </div>
 
