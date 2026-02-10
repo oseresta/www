@@ -28,7 +28,7 @@ STRATEGY_DESCRIPTIONS = {
     },
     "pv": {
         "title": "Peak Valley (US)",
-        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>."
+        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>. Forward testing tracks real performance of individual stocks. Every time a BUY signal is generated, it buys 100 USD worth of shares. Every time a SELL (or Stop Loss, Take Profit, Exit) is generated, it sells all the shares. It logs the performance over time of any ticker that has generated a BUY signal."
     }
 }
 
@@ -287,15 +287,15 @@ def generate_app_shell():
 <div id="toast">Link copied to clipboard!</div>
 
 <!-- Top container -->
-<div class="w3-bar w3-top w3-black w3-large" style="z-index:4; display: flex; align-items: center; justify-content: space-between; padding: 0 10px;">
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4; display: flex; align-items: center; padding: 0 10px;">
   <div style="display: flex; align-items: center;">
       <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa-solid fa-bars"></i> Menu</button>
-      <span class="w3-bar-item">Stock Market Analysis</span>
-  </div>
-  
-  <div style="display: flex; align-items: center;">
+      
+      <!-- Subscribe Button -->
+      <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey" onclick="document.getElementById('subscribeModal').style.display='block'"><i class="fa-solid fa-envelope"></i> Subscribe</button>
+
       <!-- Share Buttons -->
-      <span class="w3-hide-small w3-text-grey" style="margin-right: 10px; font-size: 14px;">Share:</span>
+      <span class="w3-hide-small w3-text-grey" style="margin-left: 10px; margin-right: 10px; font-size: 14px;">Share:</span>
       <button class="w3-button w3-hover-none w3-hover-text-light-grey w3-text-white share-btn" onclick="shareTo('x')" title="Share on X">
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" style="fill: white !important; vertical-align: middle;">
             <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
@@ -305,8 +305,7 @@ def generate_app_shell():
       <button class="w3-button w3-hover-none w3-hover-text-light-grey share-btn" onclick="shareTo('instagram')" title="Copy Link for Instagram"><i class="fa-brands fa-instagram"></i></button>
       <button class="w3-button w3-hover-none w3-hover-text-light-grey share-btn" onclick="shareTo('tiktok')" title="Copy Link for TikTok"><i class="fa-brands fa-tiktok"></i></button>
       
-      <!-- Subscribe Button -->
-      <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey" onclick="document.getElementById('subscribeModal').style.display='block'" style="margin-left: 15px; border-left: 1px solid #555;"><i class="fa-solid fa-envelope"></i> Subscribe</button>
+      <span class="w3-bar-item" style="border-left: 1px solid #555;">Stock Market Analysis</span>
   </div>
 </div>
 
