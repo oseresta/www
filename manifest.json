@@ -604,7 +604,7 @@
   },
   "pv": {
     "name": "Peak Valley (US)",
-    "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>. Forward testing tracks real performance of individual stocks. Every time a BUY signal is generated, it buys 100 USD worth of shares. Every time a SELL (or Stop Loss, Take Profit, Exit) is generated, it sells all the shares. It logs the performance over time of any ticker that has generated a BUY signal.",
+    "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>. Forward testing tracks real performance of the portfolio. Every time a BUY signal is generated for any stock, it buys 100 USD worth of shares. Every time a SELL (or Stop Loss, Take Profit, Exit) is generated, it sells all the shares. It logs the performance of the total portfolio over time.",
     "dates": [
       {
         "date": "2026-02-10",

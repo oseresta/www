@@ -28,7 +28,7 @@ STRATEGY_DESCRIPTIONS = {
     },
     "pv": {
         "title": "Peak Valley (US)",
-        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>. Forward testing tracks real performance of individual stocks. Every time a BUY signal is generated, it buys 100 USD worth of shares. Every time a SELL (or Stop Loss, Take Profit, Exit) is generated, it sells all the shares. It logs the performance over time of any ticker that has generated a BUY signal."
+        "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>. Forward testing tracks real performance of the portfolio. Every time a BUY signal is generated for any stock, it buys 100 USD worth of shares. Every time a SELL (or Stop Loss, Take Profit, Exit) is generated, it sells all the shares. It logs the performance of the total portfolio over time."
     }
 }
 
@@ -541,11 +541,16 @@ function shareTo(platform) {
 }
 
 // Helper: Format JSON Table
-function jsonToTable(data) {
+function jsonToTable(data, strategyKey) {
     if (!data || data.length === 0) return "<p>No data available.</p>";
     
     // Columns to exclude
     const excluded = ["Model", "Strategy", "Best_Window", "Metric_Value", "Metric_Type", "Sentiment_Score", "timestamp"];
+    
+    // Specific exclusion for Peak Valley (pv) strategy
+    if (strategyKey === 'pv') {
+        excluded.push("Performance");
+    }
     
     // Get headers, filtering out excluded ones
     const allHeaders = Object.keys(data[0]);
@@ -604,7 +609,9 @@ function jsonToTable(data) {
             if (h.toLowerCase() === 'stops' && val && typeof val === 'object') {
                 const sl = val.stop_loss ? val.stop_loss.toFixed(2) : 'N/A';
                 const tp = val.take_profit ? val.take_profit.toFixed(2) : 'N/A';
-                val = `SL: ${sl} | TP: ${tp}`;
+                const slPct = val.stop_loss_pct ? `(${val.stop_loss_pct.toFixed(0)})` : '';
+                const tpPct = val.take_profit_pct ? `(${val.take_profit_pct.toFixed(0)})` : '';
+                val = `SL ${slPct}: ${sl} | TP ${tpPct}: ${tp}`;
             }
             
             // Handle Arrays (e.g. Reasons): Join with comma
@@ -667,7 +674,7 @@ async function loadReport(strategyKey, dateItem) {
             const json = await res.json();
             // Handle array or single dict wrap
             const data = Array.isArray(json) ? json : [json];
-            summaryDiv.innerHTML = jsonToTable(data);
+            summaryDiv.innerHTML = jsonToTable(data, strategyKey);
         } catch(e) {
             summaryDiv.innerHTML = `<p class="w3-text-red">Error loading output data: ${e.message}</p>`;
         }
