@@ -549,7 +549,7 @@ function jsonToTable(data, strategyKey) {
     
     // Specific exclusion for Peak Valley (pv) strategy
     if (strategyKey === 'pv') {
-        excluded.push("Performance");
+        excluded.push("performance");
     }
     
     // Get headers, filtering out excluded ones
