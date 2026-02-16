@@ -631,6 +631,27 @@
     "description": "An <b>Accumulation Strategy</b> that scales investment aggressively as prices drop below a <b>Dynamic Moving Average</b> (optimized for market state). Includes a <b>Sentiment Filter</b> (VADER) to suppress buys during negative news cycles. Note: This analysis is performed on the <b>top 50 stocks</b> from Nifty 50 holdings. <b>Baseline</b> refers to the standard Buy & Hold strategy return for the same period. Forward Testing serves as a real-time validation mechanism that is updated daily. It operates on the strict assumption that every buy signal results in a trade executed at the daily closing price. This ensures that the performance metrics reflect a realistic and consistent execution model, free from look-ahead bias, by treating every signal as a definitive action taken at the market close.",
     "dates": [
       {
+        "date": "2026-02-16",
+        "has_output": true,
+        "output_file": "dma_bo/2026-02-16/output/output.json",
+        "forward_images": [
+          "dma_bo/2026-02-16/forward/forward_test_ADANIENT.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_BAJFINANCE.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_BHARTIARTL.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_HCLTECH.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_HDFCBANK.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_HINDUNILVR.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_INFY.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_ITC.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_M&M.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_MARUTI.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_RELIANCE.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_SUNPHARMA.BO.png",
+          "dma_bo/2026-02-16/forward/forward_test_TCS.BO.png"
+        ],
+        "backward_images": []
+      },
+      {
         "date": "2026-02-13",
         "has_output": true,
         "output_file": "dma_bo/2026-02-13/output/output.json",
