@@ -26,9 +26,9 @@
         .analysis-table tr:hover { background-color: #f5f5f5; }
         
         /* Signal Colors */
-        .signal-Buy { color: green; font-weight: bold; }
-        .signal-Sell { color: red; font-weight: bold; }
-        .signal-Hold { color: gray; }
+        .signal-Buy, .signal-BUY { color: green; font-weight: bold; }
+        .signal-Sell, .signal-SELL { color: red; font-weight: bold; }
+        .signal-Hold, .signal-HOLD { color: gray; }
         
         /* Gallery */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); gap: 20px; padding: 20px 0; }
@@ -371,75 +371,98 @@ function jsonToTable(data, strategyKey) {
     // Columns to exclude
     const excluded = ["Model", "Strategy", "Best_Window", "Metric_Value", "Metric_Type", "Sentiment_Score", "timestamp"];
     
-    // Specific exclusion for Peak Valley (pv) strategy
-    if (strategyKey === 'pv') {
-        excluded.push("performance");
-    }
-    
-    // Get headers, filtering out excluded ones
-    const allHeaders = Object.keys(data[0]);
-    const headers = allHeaders.filter(h => !excluded.includes(h));
-    
-    let html = '<table class="analysis-table w3-table-all w3-hoverable">';
-    html += '<thead><tr class="w3-light-grey">';
-    headers.forEach(h => {
-        // Replace underscores with spaces and Capitalize Each Word
-        let displayHeader = h.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase());
-        // Specific override for Ticker and Price
-        if (h.toLowerCase() === 'ticker') displayHeader = "Ticker";
-        if (h.toLowerCase() === 'current_price') displayHeader = "Current Price";
-        // Specific override for RSI and MACD
-        if (h.toLowerCase() === 'rsi') displayHeader = "RSI";
-        if (h.toLowerCase() === 'macd') displayHeader = "MACD";
-        if (h.toLowerCase() === 'mtf_trend') displayHeader = "MTF Trend";
-        if (h.toLowerCase() === 'adx') displayHeader = "ADX";
-        
-        // Responsive Classes for Peak Valley
-        let classList = "";
+        // Specific exclusion for Peak Valley (pv) strategy
         if (strategyKey === 'pv') {
-            const alwaysVisible = ['ticker', 'current_price', 'stops', 'action', 'signal'];
-            if (!alwaysVisible.includes(h.toLowerCase())) {
-                classList = "class='w3-hide-small w3-hide-medium'";
-            }
+            excluded.push("performance", "volatility");
         }
         
-        html += `<th ${classList}>${displayHeader}</th>`;
-    });
-    html += '</tr></thead><tbody>';
-    
-    data.forEach(row => {
-        html += '<tr>';
+        // Get headers, filtering out excluded ones
+        const allHeaders = Object.keys(data[0]);
+        let headers = allHeaders.filter(h => !excluded.includes(h));
+        
+        // Header mapping for Peak Valley (US)
+        const pvHeaderMap = {
+            'ticker': 'Ticker',
+            'current_price': 'Current Price',
+            'rsi': 'RSI',
+            'macd': 'MACD',
+            'trend': 'Trend',
+            'mtf_trend': 'MTF Trend',
+            'adx': 'ADX',
+            'divergence': 'Divergence',
+            'stops': 'Stops',
+            'action': 'Action',
+            'reasons': 'Reasons'
+        };
+        
+        if (strategyKey === 'pv') {
+            headers = ['ticker', 'current_price', 'rsi', 'macd', 'trend', 'mtf_trend', 'adx', 'divergence', 'stops', 'action', 'reasons'];
+        }
+
+        let html = '<table class="analysis-table w3-table-all w3-hoverable">';
+        html += '<thead><tr class="w3-light-grey">';
         headers.forEach(h => {
-            let val = row[h];
+            let displayHeader = h;
+            if (strategyKey === 'pv' && pvHeaderMap[h]) {
+                displayHeader = pvHeaderMap[h];
+            } else {
+                // Replace underscores with spaces and Capitalize Each Word
+                displayHeader = h.replace(/_/g, " ").replace(/\w/g, l => l.toUpperCase());
+                // Specific overrides
+                if (h.toLowerCase() === 'ticker') displayHeader = "Ticker";
+                if (h.toLowerCase() === 'current_price') displayHeader = "Current Price";
+                if (h.toLowerCase() === 'rsi') displayHeader = "RSI";
+                if (h.toLowerCase() === 'macd') displayHeader = "MACD";
+                if (h.toLowerCase() === 'mtf_trend') displayHeader = "MTF Trend";
+                if (h.toLowerCase() === 'adx') displayHeader = "ADX";
+            }
             
-            // Responsive Classes for Peak Valley (Data Cells)
+            // Responsive Classes for Peak Valley
             let classList = "";
             if (strategyKey === 'pv') {
-                const alwaysVisible = ['ticker', 'current_price', 'stops', 'action', 'signal'];
+                const alwaysVisible = ['ticker', 'current_price', 'stops', 'action'];
                 if (!alwaysVisible.includes(h.toLowerCase())) {
-                    classList = "class='w3-hide-small w3-hide-medium'";
+                    classList = "class='w3-hide-small'";
                 }
             }
             
-            // Handle RSI object: show status only
-            if (h.toLowerCase() === 'rsi' && val && typeof val === 'object' && val.status) {
-                val = val.status;
-            }
-            
-            // Handle MACD object: show crossover only
-            if (h.toLowerCase() === 'macd' && val && typeof val === 'object' && val.crossover) {
-                val = val.crossover;
-            }
-            
-            // Handle Trend/MTF Trend object: show status only
-            if ((h.toLowerCase() === 'trend' || h.toLowerCase() === 'mtf_trend') && val && typeof val === 'object' && val.status) {
-                val = val.status;
-            }
-            
-            // Handle ADX object: show status only
-            if (h.toLowerCase() === 'adx' && val && typeof val === 'object' && val.status) {
-                val = val.status;
-            }
+            html += `<th ${classList}>${displayHeader}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+        
+        data.forEach(row => {
+            html += '<tr>';
+            headers.forEach(h => {
+                let val = row[h];
+                
+                // Responsive Classes for Peak Valley (Data Cells)
+                let classList = "";
+                if (strategyKey === 'pv') {
+                    const alwaysVisible = ['ticker', 'current_price', 'stops', 'action'];
+                    if (!alwaysVisible.includes(h.toLowerCase())) {
+                        classList = "class='w3-hide-small'";
+                    }
+                }
+                
+                // Handle RSI object: show status only
+                if (h.toLowerCase() === 'rsi' && val && typeof val === 'object' && val.status) {
+                    val = val.status;
+                }
+                
+                // Handle MACD object: show crossover only
+                if (h.toLowerCase() === 'macd' && val && typeof val === 'object' && val.crossover) {
+                    val = val.crossover;
+                }
+                
+                // Handle Trend/MTF Trend object: show status only
+                if ((h.toLowerCase() === 'trend' || h.toLowerCase() === 'mtf_trend') && val && typeof val === 'object' && val.status) {
+                    val = val.status;
+                }
+                
+                // Handle ADX object: show status only
+                if (h.toLowerCase() === 'adx' && val && typeof val === 'object' && val.status) {
+                    val = val.status;
+                }
             
             // Handle Divergence object
             if (h.toLowerCase() === 'divergence' && val && typeof val === 'object') {
@@ -462,8 +485,14 @@ function jsonToTable(data, strategyKey) {
                 val = val.join(', ');
             }
 
+            // Handle Signal coloring (generic)
             if (h === 'Signal' && val) {
                 val = `<span class="signal-${val}">${val}</span>`;
+            }
+            // Handle Action coloring for PV
+            if (strategyKey === 'pv' && h.toLowerCase() === 'action' && val) {
+                const signalClass = val.split(' ')[0].replace(/[^a-zA-Z]/g, ''); // Extract BUY from BUY (VOL BLOCKED)
+                val = `<span class="signal-${signalClass}">${val}</span>`;
             }
             if (val === null || val === undefined) val = "";
             
