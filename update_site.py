@@ -5,7 +5,7 @@ import json
 import collections
 
 # Configuration
-STRATEGIES = ["dma", "dma_bo", "dma_hmm", "dma_hmm_bo", "pv"]
+STRATEGIES = ["dma", "dma_bo", "dma_hmm", "dma_hmm_bo", "pv", "m"]
 ROOT_DIR = "."
 
 # Descriptions for strategies
@@ -29,6 +29,10 @@ STRATEGY_DESCRIPTIONS = {
     "pv": {
         "title": "Peak Valley (US)",
         "description": "Combines <b>RSI</b> and <b>MACD</b> indicators to identify oversold conditions and bullish crossovers. Trades are filtered using a <b>Simple Moving Average (SMA)</b> to ensure alignment with the broader trend, and optionally <b>ADX</b> to confirm trend strength. Note: This analysis is performed on the <b>top 100 stocks</b> from S&P 500 holdings, and only reports tickers with a backtesting accuracy <b>greater than 50%</b>. Forward testing tracks real performance of the portfolio. Every time a BUY signal is generated for any stock, it buys 100 USD worth of shares. Every time a SELL (or Stop Loss, Take Profit, Exit) is generated, it sells all the shares. It logs the performance of the total portfolio over time."
+    },
+    "m": {
+        "title": "Momentum (US)",
+        "description": "Momentum screening strategy applied to US markets, highlighting relative acceleration dynamics with historical context benchmarks."
     }
 }
 
@@ -152,14 +156,20 @@ def generate_manifest():
             if os.path.isdir(backward_dir):
                 for img in sorted(glob.glob(os.path.join(backward_dir, "*.png"))):
                     backward_images.append(os.path.basename(img))
+                    
+            output_images = []
+            if os.path.isdir(output_dir):
+                for img in sorted(glob.glob(os.path.join(output_dir, "*.png"))):
+                    output_images.append(os.path.basename(img))
             
-            if has_output or forward_images or backward_images:
+            if has_output or forward_images or backward_images or output_images:
                 dates_data.append({
                     "date": date_folder,
                     "has_output": has_output,
                     "output_file": f"{strategy}/{date_folder}/output/output.json" if has_output else None,
                     "forward_images": [f"{strategy}/{date_folder}/forward/{img}" for img in forward_images],
-                    "backward_images": [f"{strategy}/{date_folder}/backward/{img}" for img in backward_images]
+                    "backward_images": [f"{strategy}/{date_folder}/backward/{img}" for img in backward_images],
+                    "output_images": [f"{strategy}/{date_folder}/output/{img}" for img in output_images]
                 })
 
         # Sort dates descending
@@ -708,6 +718,9 @@ async function loadReport(strategyKey, dateItem) {
     if (strategyKey === 'pv') {
         btnForward.style.display = 'block';
         btnBackward.style.display = 'block';
+    } else if (strategyKey === 'm') {
+        btnForward.style.display = 'none';
+        btnBackward.style.display = 'block';
     } else {
         btnForward.style.display = 'block';
         btnBackward.style.display = 'none';
@@ -720,9 +733,53 @@ async function loadReport(strategyKey, dateItem) {
         try {
             const res = await fetch(dateItem.output_file + '?v=' + new Date().getTime());
             const json = await res.json();
-            // Handle array or single dict wrap
-            const data = Array.isArray(json) ? json : [json];
-            summaryDiv.innerHTML = jsonToTable(data, strategyKey);
+            
+            if (strategyKey === 'm') {
+                let mHtml = "";
+                
+                const scanSummaryImg = dateItem.output_images && dateItem.output_images.find(img => img.includes("scan_results_summary.png"));
+                const histSummaryImg = dateItem.output_images && dateItem.output_images.find(img => img.includes("historical_context_summary.png"));
+                
+                if (scanSummaryImg || histSummaryImg) {
+                    mHtml += '<div class="gallery-grid">';
+                    if (scanSummaryImg) mHtml += `<div class="gallery-item"><img src="${scanSummaryImg}" alt="Scan Results Summary" onclick="window.open(this.src)"></div>`;
+                    if (histSummaryImg) mHtml += `<div class="gallery-item"><img src="${histSummaryImg}" alt="Historical Context Summary" onclick="window.open(this.src)"></div>`;
+                    mHtml += '</div><hr>';
+                }
+                
+                const scanResults = json.scan_results || [];
+                const histContext = json.historical_context || {};
+                
+                if (scanResults.length > 0) {
+                    mHtml += '<h3>Ticker Data</h3>';
+                    scanResults.forEach(item => {
+                        const ticker = item.Ticker;
+                        mHtml += `<div class="w3-card w3-margin-bottom w3-padding">`;
+                        mHtml += `<h4><b>${ticker}</b></h4>`;
+                        mHtml += '<div class="w3-row-padding">';
+                        mHtml += '<div class="w3-twothird" style="overflow-x:auto;">';
+                        const tickerHist = histContext[ticker] || {};
+                        const mergedData = { ...item, ...tickerHist };
+                        mHtml += jsonToTable([mergedData], strategyKey);
+                        mHtml += '</div>';
+                        mHtml += '<div class="w3-third">';
+                        const livetestImg = dateItem.output_images && dateItem.output_images.find(img => img.includes(`${ticker}_livetest.png`));
+                        if (livetestImg) {
+                            mHtml += `<div class="gallery-item"><img src="${livetestImg}" alt="${ticker} Livetest" style="max-width:100%" onclick="window.open(this.src)"></div>`;
+                        } else {
+                            mHtml += `<p>No plot available for ${ticker}.</p>`;
+                        }
+                        mHtml += '</div></div></div>';
+                    });
+                } else {
+                    mHtml += "<p>No data found.</p>";
+                }
+                summaryDiv.innerHTML = mHtml;
+            } else {
+                // Handle array or single dict wrap
+                const data = Array.isArray(json) ? json : [json];
+                summaryDiv.innerHTML = jsonToTable(data, strategyKey);
+            }
         } catch(e) {
             summaryDiv.innerHTML = `<p class="w3-text-red">Error loading output data: ${e.message}</p>`;
         }

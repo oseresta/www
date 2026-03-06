@@ -532,6 +532,9 @@ async function loadReport(strategyKey, dateItem) {
     if (strategyKey === 'pv') {
         btnForward.style.display = 'block';
         btnBackward.style.display = 'block';
+    } else if (strategyKey === 'm') {
+        btnForward.style.display = 'none';
+        btnBackward.style.display = 'block';
     } else {
         btnForward.style.display = 'block';
         btnBackward.style.display = 'none';
@@ -544,9 +547,53 @@ async function loadReport(strategyKey, dateItem) {
         try {
             const res = await fetch(dateItem.output_file + '?v=' + new Date().getTime());
             const json = await res.json();
-            // Handle array or single dict wrap
-            const data = Array.isArray(json) ? json : [json];
-            summaryDiv.innerHTML = jsonToTable(data, strategyKey);
+            
+            if (strategyKey === 'm') {
+                let mHtml = "";
+                
+                const scanSummaryImg = dateItem.output_images && dateItem.output_images.find(img => img.includes("scan_results_summary.png"));
+                const histSummaryImg = dateItem.output_images && dateItem.output_images.find(img => img.includes("historical_context_summary.png"));
+                
+                if (scanSummaryImg || histSummaryImg) {
+                    mHtml += '<div class="gallery-grid">';
+                    if (scanSummaryImg) mHtml += `<div class="gallery-item"><img src="${scanSummaryImg}" alt="Scan Results Summary" onclick="window.open(this.src)"></div>`;
+                    if (histSummaryImg) mHtml += `<div class="gallery-item"><img src="${histSummaryImg}" alt="Historical Context Summary" onclick="window.open(this.src)"></div>`;
+                    mHtml += '</div><hr>';
+                }
+                
+                const scanResults = json.scan_results || [];
+                const histContext = json.historical_context || {};
+                
+                if (scanResults.length > 0) {
+                    mHtml += '<h3>Ticker Data</h3>';
+                    scanResults.forEach(item => {
+                        const ticker = item.Ticker;
+                        mHtml += `<div class="w3-card w3-margin-bottom w3-padding">`;
+                        mHtml += `<h4><b>${ticker}</b></h4>`;
+                        mHtml += '<div class="w3-row-padding">';
+                        mHtml += '<div class="w3-twothird" style="overflow-x:auto;">';
+                        const tickerHist = histContext[ticker] || {};
+                        const mergedData = { ...item, ...tickerHist };
+                        mHtml += jsonToTable([mergedData], strategyKey);
+                        mHtml += '</div>';
+                        mHtml += '<div class="w3-third">';
+                        const livetestImg = dateItem.output_images && dateItem.output_images.find(img => img.includes(`${ticker}_livetest.png`));
+                        if (livetestImg) {
+                            mHtml += `<div class="gallery-item"><img src="${livetestImg}" alt="${ticker} Livetest" style="max-width:100%" onclick="window.open(this.src)"></div>`;
+                        } else {
+                            mHtml += `<p>No plot available for ${ticker}.</p>`;
+                        }
+                        mHtml += '</div></div></div>';
+                    });
+                } else {
+                    mHtml += "<p>No data found.</p>";
+                }
+                summaryDiv.innerHTML = mHtml;
+            } else {
+                // Handle array or single dict wrap
+                const data = Array.isArray(json) ? json : [json];
+                summaryDiv.innerHTML = jsonToTable(data, strategyKey);
+            }
         } catch(e) {
             summaryDiv.innerHTML = `<p class="w3-text-red">Error loading output data: ${e.message}</p>`;
         }
