@@ -732,7 +732,11 @@ async function loadReport(strategyKey, dateItem) {
         summaryDiv.innerHTML = '<p><i class="fa fa-spinner fa-spin"></i> Loading table...</p>';
         try {
             const res = await fetch(dateItem.output_file + '?v=' + new Date().getTime());
-            const json = await res.json();
+            const text = await res.text();
+            const cleanText = text.replace(/:\\s*NaN\\b/g, ': null')
+                                  .replace(/:\\s*Infinity\\b/g, ': null')
+                                  .replace(/:\\s*-Infinity\\b/g, ': null');
+            const json = JSON.parse(cleanText);
             
             if (strategyKey === 'm') {
                 let mHtml = "";
