@@ -1,0 +1,62 @@
+{
+    "scan_results": [
+        {
+            "Ticker": "BNY",
+            "Price": 162.35,
+            "Alpha (%)": 11.54,
+            "Vol Exp (x)": 1.21,
+            "RS_Line": 0.2151,
+            "Avg RS Velocity": 0.001739,
+            "Avg RS Accel": 0.001372,
+            "Avg RS Jerk": 0.000886,
+            "RS Rel Accel (%)": 4.2939,
+            "% of Global Max": 100.0
+        },
+        {
+            "Ticker": "AAPL",
+            "Price": 327.5,
+            "Alpha (%)": 8.59,
+            "Vol Exp (x)": 1.32,
+            "RS_Line": 0.4339,
+            "Avg RS Velocity": 0.003549,
+            "Avg RS Accel": 0.001689,
+            "Avg RS Jerk": 0.000704,
+            "RS Rel Accel (%)": 1.9484,
+            "% of Global Max": 60.18
+        }
+    ],
+    "historical_context": {
+        "BNY": {
+            "Max RS Rel Accel (%)": 4.2939,
+            "Max Date": "2026-07-15",
+            "Max Price": 162.35,
+            "First Date": "2013-10-22",
+            "First Price": 23.29,
+            "Last Date": "2026-07-15",
+            "Last Price": 162.35,
+            "Min Price": 23.29,
+            "Min Price Date": "2013-10-22",
+            "Max Stock Price": 162.35,
+            "Max Stock Price Date": "2026-07-15",
+            "Criteria Met Count": 33,
+            "Days to Max Rel Accel": 3322,
+            "Criteria Met to Max Count": 33
+        },
+        "AAPL": {
+            "Max RS Rel Accel (%)": 1.9484,
+            "Max Date": "2026-07-15",
+            "Max Price": 327.5,
+            "First Date": "2010-05-14",
+            "First Price": 7.6,
+            "Last Date": "2026-07-15",
+            "Last Price": 327.5,
+            "Min Price": 7.12,
+            "Min Price Date": "2010-05-20",
+            "Max Stock Price": 327.5,
+            "Max Stock Price Date": "2026-07-15",
+            "Criteria Met Count": 73,
+            "Days to Max Rel Accel": 4219,
+            "Criteria Met to Max Count": 73
+        }
+    }
+}
