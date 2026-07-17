@@ -1,0 +1,62 @@
+{
+    "scan_results": [
+        {
+            "Ticker": "ABBV",
+            "Price": 254.39,
+            "Alpha (%)": 14.23,
+            "Vol Exp (x)": 1.61,
+            "RS_Line": 0.3389,
+            "Avg RS Velocity": 0.000689,
+            "Avg RS Accel": 0.000917,
+            "Avg RS Jerk": 0.000717,
+            "RS Rel Accel (%)": 2.0972,
+            "% of Global Max": 45.23
+        },
+        {
+            "Ticker": "PYPL",
+            "Price": 56.73,
+            "Alpha (%)": 33.24,
+            "Vol Exp (x)": 1.31,
+            "RS_Line": 0.0756,
+            "Avg RS Velocity": 0.001502,
+            "Avg RS Accel": 0.00044,
+            "Avg RS Jerk": 5.5e-05,
+            "RS Rel Accel (%)": 1.336,
+            "% of Global Max": 80.94
+        }
+    ],
+    "historical_context": {
+        "ABBV": {
+            "Max RS Rel Accel (%)": 2.0972,
+            "Max Date": "2026-07-16",
+            "Max Price": 254.39,
+            "First Date": "2013-04-17",
+            "First Price": 25.08,
+            "Last Date": "2026-07-16",
+            "Last Price": 254.39,
+            "Min Price": 25.08,
+            "Min Price Date": "2013-04-17",
+            "Max Stock Price": 259.22,
+            "Max Stock Price Date": "2026-07-02",
+            "Criteria Met Count": 45,
+            "Days to Max Rel Accel": 3457,
+            "Criteria Met to Max Count": 45
+        },
+        "PYPL": {
+            "Max RS Rel Accel (%)": 1.6507,
+            "Max Date": "2016-02-09",
+            "Max Price": 32.42,
+            "First Date": "2016-02-09",
+            "First Price": 32.42,
+            "Last Date": "2026-07-16",
+            "Last Price": 56.73,
+            "Min Price": 32.42,
+            "Min Price Date": "2016-02-09",
+            "Max Stock Price": 281.76,
+            "Max Stock Price Date": "2021-02-09",
+            "Criteria Met Count": 29,
+            "Days to Max Rel Accel": 1,
+            "Criteria Met to Max Count": 1
+        }
+    }
+}
