@@ -1,0 +1,72 @@
+{
+    "scan_results": [
+        {
+            "Ticker": "CTAS",
+            "Price": 210.98,
+            "Stop Loss Price": 202.83,
+            "Take Profit Price": 221.85,
+            "RSI": 75.19,
+            "Price at RSI Lower": 148.98,
+            "Price at RSI Upper": 204.7,
+            "Alpha (%)": 25.04,
+            "Vol Exp (x)": 1.21,
+            "RS_Line": 0.2855,
+            "Avg RS Velocity": 0.003957,
+            "Avg RS Accel": 0.001701,
+            "Avg RS Jerk": 0.001198,
+            "RS Rel Accel (%)": 4.3878,
+            "% of Global Max": 100
+        },
+        {
+            "Ticker": "PYPL",
+            "Price": 56.07,
+            "Stop Loss Price": 53.46,
+            "Take Profit Price": 59.55,
+            "RSI": 74.94,
+            "Price at RSI Lower": 37.03,
+            "Price at RSI Upper": 55.17,
+            "Alpha (%)": 26.6,
+            "Vol Exp (x)": 1.24,
+            "RS_Line": 0.0759,
+            "Avg RS Velocity": 0.001252,
+            "Avg RS Accel": 0.00026,
+            "Avg RS Jerk": 0.000224,
+            "RS Rel Accel (%)": 3.2789,
+            "% of Global Max": 100
+        }
+    ],
+    "historical_context": {
+        "CTAS": {
+            "Max RS Rel Accel (%)": 4.3878,
+            "Max Date": "2026-07-27",
+            "Max Price": 210.98,
+            "First Date": "2010-09-09",
+            "First Price": 5.51,
+            "Last Date": "2026-07-27",
+            "Last Price": 210.98,
+            "Min Price": 5.51,
+            "Min Price Date": "2010-09-09",
+            "Max Stock Price": 210.98,
+            "Max Stock Price Date": "2026-07-27",
+            "Criteria Met Count": 68,
+            "Days to Max Rel Accel": 4143,
+            "Criteria Met to Max Count": 68
+        },
+        "PYPL": {
+            "Max RS Rel Accel (%)": 3.2789,
+            "Max Date": "2026-07-27",
+            "Max Price": 56.07,
+            "First Date": "2016-02-09",
+            "First Price": 32.42,
+            "Last Date": "2026-07-27",
+            "Last Price": 56.07,
+            "Min Price": 32.42,
+            "Min Price Date": "2016-02-09",
+            "Max Stock Price": 281.76,
+            "Max Stock Price Date": "2021-02-09",
+            "Criteria Met Count": 29,
+            "Days to Max Rel Accel": 2730,
+            "Criteria Met to Max Count": 29
+        }
+    }
+}
