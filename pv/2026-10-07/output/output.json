@@ -1,0 +1,3585 @@
+[
+    {
+        "ticker": "AAPL",
+        "current_price": 333.6300048828125,
+        "timestamp": "2026-10-07 07:17:01",
+        "rsi": {
+            "current": 54.576914899511316,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 317.8189832342554,
+            "sell_price": 339.64986790170195,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 3.261142394739352,
+            "signal": 4.308470834351982,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 323.67671755481086,
+            "take_profit": 346.9010546534813,
+            "stop_loss_pct": 2.9833309901181484,
+            "take_profit_pct": 3.977774653490853
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.9888873267454292,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "NVDA",
+        "current_price": 239.24000549316406,
+        "timestamp": "2026-10-07 07:17:02",
+        "rsi": {
+            "current": 67.27190513409744,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 210.1922439854036,
+            "sell_price": 233.9328291636008,
+            "status": "Overbought"
+        },
+        "macd": {
+            "current": 4.734877313502466,
+            "signal": 3.362183526464572,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 230.5153163579412,
+            "take_profit": 250.87292434012787,
+            "stop_loss_pct": 3.6468353682060735,
+            "take_profit_pct": 4.862447157608094
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.4312235788040484,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "AMZN",
+        "current_price": 256.2900085449219,
+        "timestamp": "2026-10-07 07:17:02",
+        "rsi": {
+            "current": 54.52229902057779,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 243.73945602212058,
+            "sell_price": 261.9462199164557,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -1.3430627179641021,
+            "signal": -1.9446159712680826,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 247.9697817822142,
+            "take_profit": 267.3836442285321,
+            "stop_loss_pct": 3.246410895978931,
+            "take_profit_pct": 4.328547861305234
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.1642739306526213,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 101.9451132725369,
+            "pl_pct": 1.9451132725369007
+        }
+    },
+    {
+        "ticker": "META",
+        "current_price": 738.8800048828125,
+        "timestamp": "2026-10-07 07:17:03",
+        "rsi": {
+            "current": 63.05302429254832,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 621.8305324019464,
+            "sell_price": 728.5457170433477,
+            "status": "Overbought"
+        },
+        "macd": {
+            "current": 32.67611620001901,
+            "signal": 34.46520571107937,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 702.8778919374738,
+            "take_profit": 786.882822143264,
+            "stop_loss_pct": 4.872524998297752,
+            "take_profit_pct": 6.496699997730322
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.248349998865164,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "BRK-B",
+        "current_price": 505.5400085449219,
+        "timestamp": "2026-10-07 07:17:04",
+        "rsi": {
+            "current": 50.524639087348994,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 496.4731800356152,
+            "sell_price": 514.2790918423385,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.9892095922045883,
+            "signal": -0.6147148882421085,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 497.13421498286596,
+            "take_profit": 516.7477332943298,
+            "stop_loss_pct": 1.6627355738371767,
+            "take_profit_pct": 2.216980765116243
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.1084903825581198,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "TSLA",
+        "current_price": 380.67999267578125,
+        "timestamp": "2026-10-07 07:17:04",
+        "rsi": {
+            "current": 59.64583596842736,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 336.49347806751234,
+            "sell_price": 381.49413878128814,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 3.853383749266129,
+            "signal": 3.3667372687994246,
+            "crossover": "Bullish"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": true
+        },
+        "stops": {
+            "stop_loss": 362.41160761360004,
+            "take_profit": 405.03783942535625,
+            "stop_loss_pct": 4.798882371982203,
+            "take_profit_pct": 6.398509829309619
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.199254914654807,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 99.99999999999999,
+            "pl_pct": -1.4210854715202004e-14
+        }
+    },
+    {
+        "ticker": "BLK",
+        "current_price": 1079.4200439453125,
+        "timestamp": "2026-10-07 07:17:04",
+        "rsi": {
+            "current": 49.66069075469637,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 1045.1518319453737,
+            "sell_price": 1123.0360287555682,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -9.496271093491032,
+            "signal": -11.340577276744938,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 1044.0182883661992,
+            "take_profit": 1126.6223847174638,
+            "stop_loss_pct": 3.2797015191341887,
+            "take_profit_pct": 4.3729353588455995
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.186467679422798,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 99.36574142953651,
+            "pl_pct": -0.6342585704634871
+        }
+    },
+    {
+        "ticker": "PLTR",
+        "current_price": 192.07000732421875,
+        "timestamp": "2026-10-07 07:17:05",
+        "rsi": {
+            "current": 64.31868245367328,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 168.7904029306961,
+            "sell_price": 188.26584581983118,
+            "status": "Overbought"
+        },
+        "macd": {
+            "current": 5.51165925312182,
+            "signal": 5.51027801971714,
+            "crossover": "Bullish"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 182.90008820760448,
+            "take_profit": 204.29656614637108,
+            "stop_loss_pct": 4.774258742613169,
+            "take_profit_pct": 6.36567832348421
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.1828391617421072,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 100.00000000000001,
+            "pl_pct": 1.4210854715202004e-14
+        }
+    },
+    {
+        "ticker": "COIN",
+        "current_price": 185.74000549316406,
+        "timestamp": "2026-10-07 07:17:05",
+        "rsi": {
+            "current": 50.95454273103517,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 163.39654948794544,
+            "sell_price": 202.94959347688177,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 3.4654523618264648,
+            "signal": 4.934976463733488,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 169.06773961268698,
+            "take_profit": 207.96969333380017,
+            "stop_loss_pct": 8.976130821257398,
+            "take_profit_pct": 11.968174428343193
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 5.984087214171598,
+            "local_threshold": 5.0,
+            "status": "Extreme"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "PATH",
+        "current_price": 13.100000381469727,
+        "timestamp": "2026-10-07 07:17:06",
+        "rsi": {
+            "current": 43.183010574162374,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 12.696365323426054,
+            "sell_price": 15.202549801215087,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.554420590753816,
+            "signal": -0.5876830040402776,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 12.059008652169235,
+            "take_profit": 14.487989353870383,
+            "stop_loss_pct": 7.94650151898469,
+            "take_profit_pct": 10.595335358646253
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 5.297667679323126,
+            "local_threshold": 5.0,
+            "status": "Extreme"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "SNOW",
+        "current_price": 335.95001220703125,
+        "timestamp": "2026-10-07 07:17:06",
+        "rsi": {
+            "current": 53.21034588396633,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 311.93927878297995,
+            "sell_price": 346.77069742350676,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 4.2093172026287675,
+            "signal": 4.751472272722587,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 315.17744988277553,
+            "take_profit": 363.6467619727055,
+            "stop_loss_pct": 6.183230114441698,
+            "take_profit_pct": 8.244306819255591
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 4.1221534096277965,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "AVGO",
+        "current_price": 375.80999755859375,
+        "timestamp": "2026-10-07 07:17:07",
+        "rsi": {
+            "current": 58.97556433675535,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 337.67242238050596,
+            "sell_price": 378.22794846723434,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -2.140883073057296,
+            "signal": -5.120142955128992,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 358.9246768857057,
+            "take_profit": 398.3237584557778,
+            "stop_loss_pct": 4.493047226678795,
+            "take_profit_pct": 5.990729635571726
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.995364817785863,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [
+            "Take Profit Triggered (375.81 > 366.15) [Avg Entry 343.64 + 2.0xATR]"
+        ],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "LLY",
+        "current_price": 1157.489990234375,
+        "timestamp": "2026-10-07 07:17:07",
+        "rsi": {
+            "current": 48.46004555320477,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 1132.1306343038586,
+            "sell_price": 1201.8822283615639,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -3.827000505251135,
+            "signal": -3.7198131638541305,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 1109.6318376166737,
+            "take_profit": 1221.30086039131,
+            "stop_loss_pct": 4.134649372476277,
+            "take_profit_pct": 5.512865829968357
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.756432914984181,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "JPM",
+        "current_price": 331.2799987792969,
+        "timestamp": "2026-10-07 07:17:07",
+        "rsi": {
+            "current": 35.46195561263134,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 334.11623579288977,
+            "sell_price": 354.28408505256743,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -5.6506570696809035,
+            "signal": -4.549994962216056,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 322.324969833248,
+            "take_profit": 343.2200373740287,
+            "stop_loss_pct": 2.7031601603013815,
+            "take_profit_pct": 3.6042135470685204
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.802106773534258,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 900.0,
+            "current_value": 892.2197641360016,
+            "pl_pct": -0.8644706515553808
+        }
+    },
+    {
+        "ticker": "V",
+        "current_price": 370.6400146484375,
+        "timestamp": "2026-10-07 07:17:08",
+        "rsi": {
+            "current": 54.049398079637356,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 356.00587535168825,
+            "sell_price": 377.0352378311664,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -1.0653725261347518,
+            "signal": -1.0242296599759864,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 361.72239049921086,
+            "take_profit": 382.5301801807397,
+            "stop_loss_pct": 2.4060068521433817,
+            "take_profit_pct": 3.20800913619118
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.6040045680955874,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 200.0,
+            "current_value": 205.91468462428114,
+            "pl_pct": 2.957342312140568
+        }
+    },
+    {
+        "ticker": "XOM",
+        "current_price": 164.47999572753906,
+        "timestamp": "2026-10-07 07:17:09",
+        "rsi": {
+            "current": 56.11162017819212,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 156.12338016966427,
+            "sell_price": 166.55470316198128,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.8936540166003795,
+            "signal": 0.8801155770959309,
+            "crossover": "Bullish"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 159.2637576356693,
+            "take_profit": 171.43497985003208,
+            "stop_loss_pct": 3.1713510623568246,
+            "take_profit_pct": 4.228468083142427
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.1142340415712115,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 100.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "MA",
+        "current_price": 566.5800170898438,
+        "timestamp": "2026-10-07 07:17:09",
+        "rsi": {
+            "current": 50.94885014624137,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 548.9510396818757,
+            "sell_price": 581.9760051567125,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -3.1887369948615287,
+            "signal": -2.8174662573804383,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 552.3822056001015,
+            "take_profit": 585.5104324095,
+            "stop_loss_pct": 2.5058793218065136,
+            "take_profit_pct": 3.3411724290753524
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.6705862145376762,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 300.0,
+            "current_value": 308.3474895551252,
+            "pl_pct": 2.782496518375069
+        }
+    },
+    {
+        "ticker": "COST",
+        "current_price": 935.6799926757812,
+        "timestamp": "2026-10-07 07:17:10",
+        "rsi": {
+            "current": 58.276243612958396,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 894.0110569210059,
+            "sell_price": 940.1835171186942,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -1.0920900668603508,
+            "signal": -5.4598634233308045,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 912.4495648750965,
+            "take_profit": 966.6538964100276,
+            "stop_loss_pct": 2.4827321287753823,
+            "take_profit_pct": 3.310309505033847
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.6551547525169255,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 101.39904557704298,
+            "pl_pct": 1.3990455770429833
+        }
+    },
+    {
+        "ticker": "PG",
+        "current_price": 148.41000366210938,
+        "timestamp": "2026-10-07 07:17:10",
+        "rsi": {
+            "current": 56.258259906139884,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 141.9253651182732,
+            "sell_price": 150.18663188063405,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.21625589698453496,
+            "signal": 0.2282266954855724,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 144.7791456209964,
+            "take_profit": 153.25114771692668,
+            "stop_loss_pct": 2.446504919829729,
+            "take_profit_pct": 3.2620065597729653
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.6310032798864849,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "ABBV",
+        "current_price": 266.69000244140625,
+        "timestamp": "2026-10-07 07:17:11",
+        "rsi": {
+            "current": 59.764049875436356,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 253.18094436376649,
+            "sell_price": 266.8568295796084,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 1.9432035356471147,
+            "signal": 2.047676565528451,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": true
+        },
+        "stops": {
+            "stop_loss": 258.4397881306192,
+            "take_profit": 277.6902881891223,
+            "stop_loss_pct": 3.0935596517532282,
+            "take_profit_pct": 4.124746202337645
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.0623731011688187,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "BAC",
+        "current_price": 54.09000015258789,
+        "timestamp": "2026-10-07 07:17:12",
+        "rsi": {
+            "current": 25.664510595846423,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 55.87247506807842,
+            "sell_price": 60.493912866889296,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -1.9565872073572308,
+            "signal": -1.703763465582111,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 52.48073920955659,
+            "take_profit": 56.23568140996296,
+            "stop_loss_pct": 2.9751542586274295,
+            "take_profit_pct": 3.9668723448365686
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.9834361724182858,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 300.0,
+            "current_value": 300.79922537265617,
+            "pl_pct": 0.2664084575520557
+        }
+    },
+    {
+        "ticker": "WMT",
+        "current_price": 107.19999694824219,
+        "timestamp": "2026-10-07 07:17:13",
+        "rsi": {
+            "current": 50.15718709171934,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 103.88172096050533,
+            "sell_price": 111.44760522463,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.7292187402919268,
+            "signal": -0.6222213310746236,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 103.89494391285311,
+            "take_profit": 111.60673432876095,
+            "stop_loss_pct": 3.083071949138963,
+            "take_profit_pct": 4.1107625988519425
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.055381299425972,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 103.15627293792336,
+            "pl_pct": 3.1562729379233616
+        }
+    },
+    {
+        "ticker": "KO",
+        "current_price": 86.16999816894531,
+        "timestamp": "2026-10-07 07:17:13",
+        "rsi": {
+            "current": 42.93693609191727,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 85.58803597676449,
+            "sell_price": 89.38109055252364,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.38592275783155117,
+            "signal": -0.13646925353549527,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 84.3335702391077,
+            "take_profit": 88.61856874206212,
+            "stop_loss_pct": 2.1311685840321157,
+            "take_profit_pct": 2.8415581120428155
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.4207790560214102,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 100.6071180779948,
+            "pl_pct": 0.607118077994798
+        }
+    },
+    {
+        "ticker": "CVX",
+        "current_price": 207.5800018310547,
+        "timestamp": "2026-10-07 07:17:13",
+        "rsi": {
+            "current": 53.56445247433295,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 199.2641645884564,
+            "sell_price": 211.7887007622645,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.6644921409838958,
+            "signal": 1.2225922012380206,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 201.3562912851614,
+            "take_profit": 215.87828255891242,
+            "stop_loss_pct": 2.9982226086300163,
+            "take_profit_pct": 3.9976301448400307
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.9988150724200138,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "WFC",
+        "current_price": 81.51000213623047,
+        "timestamp": "2026-10-07 07:17:14",
+        "rsi": {
+            "current": 39.08767310804505,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 81.69524742976303,
+            "sell_price": 87.87928188843846,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -1.72463169814354,
+            "signal": -1.393475998206286,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 78.83452762817613,
+            "take_profit": 85.0773014803029,
+            "stop_loss_pct": 3.2823879744018694,
+            "take_profit_pct": 4.37651729920248
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.1882586496012424,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 1000.0,
+            "current_value": 1003.8924150936314,
+            "pl_pct": 0.38924150936313706
+        }
+    },
+    {
+        "ticker": "DIS",
+        "current_price": 104.02999877929688,
+        "timestamp": "2026-10-07 07:17:16",
+        "rsi": {
+            "current": 48.197124238303324,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 100.70315777093585,
+            "sell_price": 109.12262431370556,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.45380508831787836,
+            "signal": -0.16849973565083698,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 100.95251308142552,
+            "take_profit": 108.13331304312534,
+            "stop_loss_pct": 2.9582675516514634,
+            "take_profit_pct": 3.94435673553528
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.972178367767642,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 102.6645582744031,
+            "pl_pct": 2.664558274403106
+        }
+    },
+    {
+        "ticker": "MCS",
+        "current_price": 26.440000534057617,
+        "timestamp": "2026-10-07 07:17:16",
+        "rsi": {
+            "current": 36.2667677690944,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 26.818260569225522,
+            "sell_price": 29.237763325255557,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -0.25140063404262136,
+            "signal": -0.0904875931440353,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 25.229835269582505,
+            "take_profit": 28.05355422002443,
+            "stop_loss_pct": 4.577024357152665,
+            "take_profit_pct": 6.102699142870212
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.051349571435108,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 200.0,
+            "current_value": 199.17479626926612,
+            "pl_pct": -0.41260186536693766
+        }
+    },
+    {
+        "ticker": "CSCO",
+        "current_price": 117.94000244140625,
+        "timestamp": "2026-10-07 07:17:17",
+        "rsi": {
+            "current": 68.49647991324663,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 104.07760562620223,
+            "sell_price": 113.04351779626157,
+            "status": "Overbought"
+        },
+        "macd": {
+            "current": 0.3974192253165967,
+            "signal": -0.758965329994288,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 113.76289094515693,
+            "take_profit": 123.50948443640534,
+            "stop_loss_pct": 3.5417258010695347,
+            "take_profit_pct": 4.722301068092709
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.3611505340463546,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "TMUS",
+        "current_price": 165.92999267578125,
+        "timestamp": "2026-10-07 07:17:18",
+        "rsi": {
+            "current": 42.32477991787423,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 164.75337334193412,
+            "sell_price": 179.3486858940507,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -4.027815487017222,
+            "signal": -4.0052420063982686,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 159.6404401920601,
+            "take_profit": 174.31606265407612,
+            "stop_loss_pct": 3.790485603172781,
+            "take_profit_pct": 5.053980804230386
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.526990402115189,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 100.78352362179001,
+            "pl_pct": 0.7835236217900103
+        }
+    },
+    {
+        "ticker": "PFE",
+        "current_price": 27.5,
+        "timestamp": "2026-10-07 07:17:18",
+        "rsi": {
+            "current": 43.75262705585245,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 27.25783585346439,
+            "sell_price": 28.743306130635,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.10761821441578334,
+            "signal": 0.24217981012689666,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 26.712232969565502,
+            "take_profit": 28.55035604057933,
+            "stop_loss_pct": 2.864607383398175,
+            "take_profit_pct": 3.819476511197567
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.9097382555987825,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "IBM",
+        "current_price": 221.2899932861328,
+        "timestamp": "2026-10-07 07:17:19",
+        "rsi": {
+            "current": 40.37889122766164,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 220.8657802319278,
+            "sell_price": 243.11311567253247,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -3.8836826898874506,
+            "signal": -2.8830385410663784,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 211.8039797656519,
+            "take_profit": 233.9380113134407,
+            "stop_loss_pct": 4.286688873552135,
+            "take_profit_pct": 5.715585164736181
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.8577925823680874,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 400.0,
+            "current_value": 399.57111261764385,
+            "pl_pct": -0.10722184558903791
+        }
+    },
+    {
+        "ticker": "VZ",
+        "current_price": 45.97999954223633,
+        "timestamp": "2026-10-07 07:17:20",
+        "rsi": {
+            "current": 35.64854602264808,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 46.40018450243583,
+            "sell_price": 49.50713602587909,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -0.8307881211569779,
+            "signal": -0.5741284722935407,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": true,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 44.6759757059869,
+            "take_profit": 47.7186979905689,
+            "stop_loss_pct": 2.8360675276901146,
+            "take_profit_pct": 3.781423370253486
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.8907116851267405,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [
+            "Max Hold Reached (Average Hold 11 days >= 10 days)"
+        ],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "AMAT",
+        "current_price": 530.27001953125,
+        "timestamp": "2026-10-07 07:17:21",
+        "rsi": {
+            "current": 64.11257013360657,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 439.3470445562102,
+            "sell_price": 519.9316466613017,
+            "status": "Overbought"
+        },
+        "macd": {
+            "current": 15.221147406265288,
+            "signal": 4.575382608378462,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 501.71250074701857,
+            "take_profit": 568.3467112435586,
+            "stop_loss_pct": 5.385467352930081,
+            "take_profit_pct": 7.180623137240115
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.5903115686200535,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "MS",
+        "current_price": 191.02000427246094,
+        "timestamp": "2026-10-07 07:17:22",
+        "rsi": {
+            "current": 31.925748239827428,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 194.88140300588833,
+            "sell_price": 211.15918560008188,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -6.035257712619341,
+            "signal": -5.29942330280079,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": true,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 184.21743502314922,
+            "take_profit": 200.09009660487658,
+            "stop_loss_pct": 3.561181602534616,
+            "take_profit_pct": 4.748242136712831
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.374121068356413,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [
+            "Stop Loss Triggered (191.02 < 195.91) [Avg Entry 202.71 - 1.5xATR]"
+        ],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "HON",
+        "current_price": 212.8699951171875,
+        "timestamp": "2026-10-07 07:17:23",
+        "rsi": {
+            "current": 50.14309594796224,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 206.77731001787924,
+            "sell_price": 218.15577030094548,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.8164934715074423,
+            "signal": -2.1525473516931726,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 206.47121644011025,
+            "take_profit": 221.40170001995716,
+            "stop_loss_pct": 3.005956134660801,
+            "take_profit_pct": 4.007941512881068
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.0039707564405376,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "AMGN",
+        "current_price": 402.6000061035156,
+        "timestamp": "2026-10-07 07:17:23",
+        "rsi": {
+            "current": 47.57250771032118,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 387.7992188210575,
+            "sell_price": 426.700064084659,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.2891156552539087,
+            "signal": -0.04660569156330788,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 387.6111700212033,
+            "take_profit": 422.58512087993205,
+            "stop_loss_pct": 3.7230094026522282,
+            "take_profit_pct": 4.9640125368696335
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.4820062684348194,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "UNP",
+        "current_price": 276.6099853515625,
+        "timestamp": "2026-10-07 07:17:24",
+        "rsi": {
+            "current": 42.28389136474195,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 274.8964801997255,
+            "sell_price": 289.676611190641,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -4.122657891672702,
+            "signal": -4.719844541533863,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 269.3820035750379,
+            "take_profit": 286.2472943869286,
+            "stop_loss_pct": 2.613058876865219,
+            "take_profit_pct": 3.484078502486959
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.742039251243483,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 800.0,
+            "current_value": 806.7459407390596,
+            "pl_pct": 0.8432425923824525
+        }
+    },
+    {
+        "ticker": "SPGI",
+        "current_price": 396.1300048828125,
+        "timestamp": "2026-10-07 07:17:25",
+        "rsi": {
+            "current": 41.85721995399622,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 394.1048581597286,
+            "sell_price": 425.80483538315656,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -8.310608929913144,
+            "signal": -7.433674989103531,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 382.14478811331537,
+            "take_profit": 414.7769605754753,
+            "stop_loss_pct": 3.530461362964512,
+            "take_profit_pct": 4.707281817286006
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.3536409086430035,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 1000.0,
+            "current_value": 999.7700627972926,
+            "pl_pct": -0.022993720270744686
+        }
+    },
+    {
+        "ticker": "SYK",
+        "current_price": 278.20001220703125,
+        "timestamp": "2026-10-07 07:17:25",
+        "rsi": {
+            "current": 43.14501992777615,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 273.1754631728993,
+            "sell_price": 301.6178832740357,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -7.82109443135181,
+            "signal": -10.385666323224125,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 266.12149849285214,
+            "take_profit": 294.30469715927006,
+            "stop_loss_pct": 4.341665414878022,
+            "take_profit_pct": 5.7888872198373615
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.8944436099186808,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 500.0,
+            "current_value": 504.791050092252,
+            "pl_pct": 0.9582100184504043
+        }
+    },
+    {
+        "ticker": "SCHW",
+        "current_price": 96.80000305175781,
+        "timestamp": "2026-10-07 07:17:26",
+        "rsi": {
+            "current": 32.70530444913683,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 99.2433799817497,
+            "sell_price": 107.76345798233693,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -2.7048769109464246,
+            "signal": -2.211744755772671,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": true,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 93.56562724273816,
+            "take_profit": 101.11250413045069,
+            "stop_loss_pct": 3.3412972180282585,
+            "take_profit_pct": 4.455062957371016
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.227531478685509,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 1000.0,
+            "current_value": 984.8455096636502,
+            "pl_pct": -1.5154490336349795
+        }
+    },
+    {
+        "ticker": "TJX",
+        "current_price": 137.02999877929688,
+        "timestamp": "2026-10-07 07:17:26",
+        "rsi": {
+            "current": 58.434882369888975,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 128.30338685410734,
+            "sell_price": 137.88210481037558,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.7752611559315312,
+            "signal": -2.3096466103166513,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 132.68284315266303,
+            "take_profit": 142.82620628147535,
+            "stop_loss_pct": 3.17241163640048,
+            "take_profit_pct": 4.229882181867314
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.1149410909336552,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "COP",
+        "current_price": 129.35000610351562,
+        "timestamp": "2026-10-07 07:17:27",
+        "rsi": {
+            "current": 50.66847049113283,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 123.50355030069989,
+            "sell_price": 134.87928121067742,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -0.7419698884932018,
+            "signal": -0.30027630695238006,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 124.61514905074631,
+            "take_profit": 135.66314884054137,
+            "stop_loss_pct": 3.6605000613452807,
+            "take_profit_pct": 4.880666748460367
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.440333374230188,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 103.35597644940358,
+            "pl_pct": 3.3559764494035846
+        }
+    },
+    {
+        "ticker": "PGR",
+        "current_price": 212.0500030517578,
+        "timestamp": "2026-10-07 07:17:27",
+        "rsi": {
+            "current": 49.58683551758259,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 204.00153927989294,
+            "sell_price": 220.50720113862457,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -1.5071882279540603,
+            "signal": -1.825702531715967,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 205.5269501117258,
+            "take_profit": 220.7474069718005,
+            "stop_loss_pct": 3.076186204269872,
+            "take_profit_pct": 4.101581605693163
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.0507908028465818,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "ETN",
+        "current_price": 445.0899963378906,
+        "timestamp": "2026-10-07 07:17:28",
+        "rsi": {
+            "current": 59.94061361602125,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 401.6450335294768,
+            "sell_price": 445.2379810979427,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 6.193185189535484,
+            "signal": 4.771589931764261,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": true
+        },
+        "stops": {
+            "stop_loss": 424.6703900737006,
+            "take_profit": 472.3161380234773,
+            "stop_loss_pct": 4.587747743646982,
+            "take_profit_pct": 6.116996991529312
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.0584984957646553,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "VRTX",
+        "current_price": 502.30999755859375,
+        "timestamp": "2026-10-07 07:17:29",
+        "rsi": {
+            "current": 37.67744216505403,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 505.30448083706494,
+            "sell_price": 539.1671703093482,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -4.183202872480365,
+            "signal": -1.8641289560215641,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 484.6225398088663,
+            "take_profit": 525.8932745582304,
+            "stop_loss_pct": 3.5212235145019664,
+            "take_profit_pct": 4.694964686002622
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.3474823430013125,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "BUY",
+        "reasons": [],
+        "performance": {
+            "invested": 300.0,
+            "current_value": 299.28418701621166,
+            "pl_pct": -0.23860432792944644
+        }
+    },
+    {
+        "ticker": "CB",
+        "current_price": 334.2099914550781,
+        "timestamp": "2026-10-07 07:17:29",
+        "rsi": {
+            "current": 47.10672159357156,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 330.11986500975235,
+            "sell_price": 345.00493307089505,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -2.783535474366772,
+            "signal": -2.633558936109913,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 326.5399026034645,
+            "take_profit": 344.43677659056294,
+            "stop_loss_pct": 2.2949908882794667,
+            "take_profit_pct": 3.059987851039283
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.5299939255196404,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 700.0,
+            "current_value": 707.5125411217446,
+            "pl_pct": 1.073220160249223
+        }
+    },
+    {
+        "ticker": "MU",
+        "current_price": 1045.56005859375,
+        "timestamp": "2026-10-07 07:17:30",
+        "rsi": {
+            "current": 53.944039336123325,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 934.6977816259991,
+            "sell_price": 1084.5081061646233,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 30.146087573320756,
+            "signal": 31.36706253242879,
+            "crossover": "Bearish"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 980.4027564644109,
+            "take_profit": 1132.4364614328688,
+            "stop_loss_pct": 6.231808645882466,
+            "take_profit_pct": 8.309078194509954
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 4.15453909725498,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "CI",
+        "current_price": 274.3699951171875,
+        "timestamp": "2026-10-07 07:17:30",
+        "rsi": {
+            "current": 49.24178538948755,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 265.72125845217903,
+            "sell_price": 286.23053275178967,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -2.1233538920988053,
+            "signal": -2.0688220404274325,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 263.64377826838484,
+            "take_profit": 288.6716175822577,
+            "stop_loss_pct": 3.9093986367646862,
+            "take_profit_pct": 5.212531515686234
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.606265757843118,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 600.0,
+            "current_value": 610.7432761417525,
+            "pl_pct": 1.7905460236254194
+        }
+    },
+    {
+        "ticker": "PLD",
+        "current_price": 128.67999267578125,
+        "timestamp": "2026-10-07 07:17:31",
+        "rsi": {
+            "current": 31.579703204409924,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 130.71911596583973,
+            "sell_price": 139.00370640816664,
+            "status": "Oversold"
+        },
+        "macd": {
+            "current": -2.4622661218438395,
+            "signal": -2.0376152556598566,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 125.46999633771358,
+            "take_profit": 132.95998779320482,
+            "stop_loss_pct": 2.4945574454262607,
+            "take_profit_pct": 3.3260765939016883
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.6630382969508435,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [
+            "Stop Loss Triggered (128.68 < 131.21) [Avg Entry 134.42 - 1.5xATR]"
+        ],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "SBUX",
+        "current_price": 96.11000061035156,
+        "timestamp": "2026-10-07 07:17:32",
+        "rsi": {
+            "current": 42.914356877625664,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 95.48719894653237,
+            "sell_price": 101.58683516297414,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": -2.1232716540635863,
+            "signal": -2.405524509389295,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 93.02648132487631,
+            "take_profit": 100.2213596576519,
+            "stop_loss_pct": 3.2083230318314415,
+            "take_profit_pct": 4.277764042441931
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.138882021220965,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 100.0,
+            "current_value": 101.31773138515413,
+            "pl_pct": 1.3177313851541328
+        }
+    },
+    {
+        "ticker": "ADI",
+        "current_price": 420.54998779296875,
+        "timestamp": "2026-10-07 07:17:32",
+        "rsi": {
+            "current": 73.50020597275186,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 359.16467051821303,
+            "sell_price": 403.38015713635406,
+            "status": "Overbought"
+        },
+        "macd": {
+            "current": 11.88405322071793,
+            "signal": 7.368132577589555,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 404.40373547681196,
+            "take_profit": 442.0783242145111,
+            "stop_loss_pct": 3.8393182225237346,
+            "take_profit_pct": 5.11909096336497
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.5595454816824885,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "SELL",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "GILD",
+        "current_price": 144.22999572753906,
+        "timestamp": "2026-10-07 07:17:33",
+        "rsi": {
+            "current": 43.40121910633747,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 142.46405125438514,
+            "sell_price": 152.64823198173775,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.6400898169913489,
+            "signal": 1.7727268681854942,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 139.16432445907338,
+            "take_profit": 150.9842240854933,
+            "stop_loss_pct": 3.5122175820036072,
+            "take_profit_pct": 4.682956776004816
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 2.3414783880024097,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "KLAC",
+        "current_price": 197.4600067138672,
+        "timestamp": "2026-10-07 07:17:33",
+        "rsi": {
+            "current": 56.69344738477125,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 172.3783879406455,
+            "sell_price": 200.77203249409135,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 4.438028015746852,
+            "signal": 1.5949997401440414,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 185.6970486409424,
+            "take_profit": 213.1439508111002,
+            "stop_loss_pct": 5.957134443923171,
+            "take_profit_pct": 7.9428459252308805
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 3.9714229626154425,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "LRCX",
+        "current_price": 333.8900146484375,
+        "timestamp": "2026-10-07 07:17:34",
+        "rsi": {
+            "current": 59.36390767005141,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 281.24808484290304,
+            "sell_price": 335.0428510956243,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 9.557384581580834,
+            "signal": 4.31169574311455,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 313.3397908111294,
+            "take_profit": 361.2903130981816,
+            "stop_loss_pct": 6.154788384116864,
+            "take_profit_pct": 8.206384512155807
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 4.1031922560779055,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    },
+    {
+        "ticker": "MO",
+        "current_price": 68.55000305175781,
+        "timestamp": "2026-10-07 07:17:34",
+        "rsi": {
+            "current": 52.54764317618761,
+            "lower": 40.0,
+            "upper": 60.0,
+            "buy_price": 66.37378404228745,
+            "sell_price": 70.04148009363594,
+            "status": "Neutral"
+        },
+        "macd": {
+            "current": 0.020491094127791598,
+            "signal": 0.16707031119063098,
+            "crossover": "None"
+        },
+        "trend": {
+            "enabled": false,
+            "sma_window": 50,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "mtf_trend": {
+            "enabled": false,
+            "period": 1,
+            "sma_window": 20,
+            "sma_price": null,
+            "status": "UP"
+        },
+        "adx": {
+            "enabled": false,
+            "current": 0.0,
+            "threshold": 25.0,
+            "status": "Strong"
+        },
+        "divergence": {
+            "enabled": true,
+            "bullish": false,
+            "bearish": false
+        },
+        "stops": {
+            "stop_loss": 66.50992647728945,
+            "take_profit": 71.27010515104895,
+            "stop_loss_pct": 2.976041551636437,
+            "take_profit_pct": 3.9680554021819097
+        },
+        "volatility": {
+            "vix_enabled": true,
+            "vix_value": 15.010000228881836,
+            "vix_threshold": 30.0,
+            "local_enabled": true,
+            "local_method": "atr_pct",
+            "local_value": 1.9840277010909588,
+            "local_threshold": 5.0,
+            "status": "Calm"
+        },
+        "action": "HOLD",
+        "reasons": [],
+        "performance": {
+            "invested": 0.0,
+            "current_value": 0.0,
+            "pl_pct": 0.0
+        }
+    }
+]
